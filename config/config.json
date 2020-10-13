@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "NewRalE88?",
-    "database": "ghost-storiesDB",
+    "password": "",
+    "database": "ghostStories_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
