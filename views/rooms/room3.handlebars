@@ -1,0 +1,17 @@
+<h1>{{ghost-name}}</h1>
+
+<img src={{bgimg-source}} alt="backgroundImage" />
+<img src={{ghostImg}} id="ghostSprite" />
+
+<container class="dialogueBox">
+    {{!-- Add dialogue --}}
+    {{!-- V V can be boiled down later --}}
+    <p class="dialogue">{{insert current line of text here}}</p>
+    <p>{{insert next dialogue line here}}</p>
+    <hr>
+    <br>
+
+    <button id="positive">{{positive-response}}</button>
+    <button id="negative">{{negative-response}}</button>
+    <button id="run">RUN!</button>
+</container>
