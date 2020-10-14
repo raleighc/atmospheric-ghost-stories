@@ -29,3 +29,31 @@ CREATE TABLE story_one
         the
         others one of these keys and get on their good side to convince them to leave the house for good. If you help
         me, I can leave.", "GET OUT");
+
+
+    CREATE TABLE story_two
+    (
+        story_id int NOT NULL
+        AUTO_INCREMENT,
+    positive TEXT,
+    negative TEXT, 
+    Primary Key
+        (story_id)
+);
+
+        INSERT INTO story_two
+            (positive, negative)
+        VALUES
+            ("HELLO MORTAL", " "),
+            ("Hahaha. I'm just messing with you. I get bored sometimes and we don't see many newcomers 'round
+        here. My name is {{ghost-name2}}, and I travelled this whole country looking for ore before the railroads were
+        even built.", "Hah. Get yourself together. Why are you so scared of everything? I travelled this whole land barefoot,
+        and I remember everyone being scared of Ol' {{ghost-name2}}, not the other way around!"),
+            ("AHAHAHA I spent 18 hours a day digging through the dirt and you ask why I smell bad? Of course
+        I do! I came from {{city-name2}}, but I dug hard and I even owned my own mine for awhile. The people around here
+        called it Ol' {{ghost-name2}}'s Mud Pit. I think we might be on top of it now. This house was never here for me
+        to see it before I just kind of...showed up.", "Of course I did! What else would I have dug for? I left {{city-name2}} to dig for stuff when I was
+        {{age2}} years old. Years later, there was an accident, I think, and all of the sudden I'm stuck here in this
+        fancy house."),
+            ("Will you help me, friend? I think I'm trapped, and as much I think {{ghost-name1}} is a nice
+        lady, this house isn't my own and I need to keep searching for gold.", "I'll mine your head for gold, {{user-name}}!!!")
