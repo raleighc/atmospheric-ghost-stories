@@ -17,7 +17,7 @@ CREATE TABLE stories
         (positive1, negative1, positive2, negative2)
     VALUES
         ("Hello, {{user-name}}. I’m sorry to bother you, but you looked lost. I didn’t mean to scare you. I just wanted to make
-        sure you were alright. You seem...distracted. You just walked in here with a dazed look. Do you need anything?", "", "HELLO MORTAL", " "),
+        sure you were alright. You seem...distracted. You just walked in here with a dazed look. Do you need anything?", " ", "HELLO MORTAL", " "),
         ("My name is {{ghost-name}}, and this is my home. Welcome. I’m sorry for the mess, there’s only
         so much I can do around here these days. It’s been so long since I’ve had new company.", "Oh, calm down. My name is [ghost-name] and this is my home. Normally I would welcome visitors, please be kind and don’t make me change my mind.", "Hahaha. I'm just messing with you. I get bored sometimes and we don't see many newcomers 'round here. My name is {{ghost-name2}}, and I travelled this whole country looking for ore before the railroads were even built.", "Hah. Get yourself together. Why are you so scared of everything? I travelled this whole land barefoot, and I remember everyone being scared of Ol' {{ghost-name2}}, not the other way around!"),
         ("I was born in {{city-name}} but I spent most of my life in this house. My husband, [name], and I
