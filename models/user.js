@@ -1,17 +1,17 @@
-module.exports = function (sequelize, Datatypes) {
+module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define("User", {
       fullName: {
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         notNull: true,
         notEmpty: true,
       },
       age: {
-        type: Datatypes.INTEGER,
+        type: DataTypes.INTEGER,
         notNull: true,
         notEmpty: true,
       },
       gender: {
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         notEmpty: true,
         notNull: true,
       },

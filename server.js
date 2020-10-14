@@ -1,13 +1,12 @@
 // Requiring Dependencies
 const express = require("express");
 const exphbs = require("express-handlebars");
+const db = require("./models");
+const userController = require("./controllers/userController");
 
 // Sets up the Express App
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-// Requiring our models for syncing
-var db = require("./models");
 
 // Express Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -26,6 +25,8 @@ app.get("/api/config", (req, res) => {
 });
 
 // Views Routes
+app.use(userController);
+
 app.get("/", (req, res) => {
   res.render("index");
 });

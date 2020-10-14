@@ -1,27 +1,27 @@
-module.exports = function (sequelize, Datatypes) {
+module.exports = function (sequelize, DataTypes) {
   const Ghost = sequelize.define("Ghost", {
     fullName: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       notNull: true,
       notEmpty: true,
     },
     age: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       notNull: true,
       notEmpty: true,
     },
     homeTown: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       notEmpty: true,
       notNull: true,
     },
     faveSport: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       notNull: true,
       notEmpty: true,
     },
     storyId: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
     },
   });
   Ghost.associate = function (models) {
