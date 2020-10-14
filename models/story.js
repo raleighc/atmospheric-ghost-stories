@@ -1,45 +1,18 @@
-module.exports = function (sequelize, Datatypes) {
+module.exports = function (sequelize, DataTypes) {
   const Story = sequelize.define("Story", {
-    positiveStory1: {
-      type: Datatypes.TEXT,
+    positiveStory: {
+
+      type: DataTypes.TEXT,
       notNull: true,
       notEmpty: true,
     },
-    positiveStory2: {
-      type: Datatypes.TEXT,
+
+    negativeStory: {
+      type: DataTypes.TEXT,
       notNull: true,
       notEmpty: true,
-    },
-    positiveStory3: {
-      type: Datatypes.TEXT,
-      notNull: true,
-      notEmpty: true,
-    },
-    positiveStory4: {
-      type: Datatypes.TEXT,
-      notNull: true,
-      notEmpty: true,
-    },
-    positiveStory5: {
-      type: Datatypes.TEXT,
-      notNull: true,
-      notEmpty: true,
-    },
-    negativeStory1: {
-      type: Datatypes.TEXT,
-      notNull: true,
-      notEmpty: true,
-    },
-    negativeStory2: {
-      type: Datatypes.TEXT,
-      notNull: true,
-      notEmpty: true,
-    },
-    negativeStory3: {
-      type: Datatypes.TEXT,
-      notNull: true,
-      notEmpty: true,
-    },
+    }
+
   });
   Story.associate = function (models) {
     Story.belongsTo(models.Ghost, {
