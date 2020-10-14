@@ -7,7 +7,7 @@ $("#negativeBtn").on("click", function (req, res) {
   // prompt negative 1 response
 });
 
-$("#run").on("click", function (req, res) {
+$("#run").onclick = function () {
   // return to foyer
-  window.location.href = "/views/index.handlebars";
+  window.location.href = "/index.handlebars/";
 });
