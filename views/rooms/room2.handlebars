@@ -1,11 +1,50 @@
 <h1>{{ghost-name}}</h1>
 
-<img src={{bgimg-source}} alt="backgroundImage" />
-<img src={{ghostImg}} id="ghostSprite" />
+<img src={{bgimg-source}} alt="backgroundImage2" />
+<img src={{ghostImg2}} id="ghostSprite2" />
 
 <container class="dialogueBox">
     {{!-- Add dialogue --}}
-    {{!-- V V can be boiled down later --}}
+    <p>
+        HELLO MORTAL
+    </p>
+
+    {{!-- User: pos. "Ahhh! Hello? Who are you?", neg. "Oh my gosh what the heck? why do you have to be so mean." --}}
+    <p>
+        {{!-- say name --}}
+        {{#if positive}}`Hahaha. I'm just messing with you. I get bored sometimes and we don't see many newcomers 'round
+        here. My name is {{ghost-name2}}, and I travelled this whole country looking for ore before the railroads were
+        even built.`
+        {{else}}`Hah. Get yourself together. Why are you so scared of everything? I travelled this whole land barefoot,
+        and I remember everyone being scared of Ol' {{ghost-name2}}, not the other way around!`
+        {{/if}}
+    </p>
+    {{!-- User: pos. "Uh, ok. Why do you smell so bad?", neg. "Oh, cool, did you mine gold?" --}}
+    <p>
+        {{!-- where is the ghost from? first part of their life story --}}
+        {{#if positive}}`AHAHAHA I spent 18 hours a day digging through the dirt and you ask why I smell bad? Of course
+        I do! I came from {{city-name2}}, but I dug hard and I even owned my own mine for awhile. The people around here
+        called it Ol' {{ghost-name2}}'s Mud Pit. I think we might be on top of it now. This house was never here for me
+        to see it before I just kind of...showed up.`
+        {{else}}`Of course I did! What else would I have dug for? I left {{city-name2}} to dig for stuff when I was
+        {{age2}} years old. Years later, there was an accident, I think, and all of the sudden I'm stuck here in this
+        fancy house.`
+        {{/if}}
+    </p>
+    {{!-- User: pos. "Are you trapped here? I think I can help.", neg. "Have fun sitting here doing nothing." --}}
+    <p>
+        {{!-- second part of story, ask for help --}}
+        {{#if positive}} `Will you help me, friend? I think I'm trapped, and as much I think {{ghost-name1}} is a nice
+        lady, this house isn't my own and I need to keep searching for gold.`
+        {{else}} `I'll mine your head for gold, {{user-name}}!!!`
+        {{/if}}
+    </p>
+
+    {{!-- if you get this far, the ghost leaves --}}
+
+
+
+    {{!-- ^^ can be abstracted later --}}
     <p class="dialogue">{{insert current line of text here}}</p>
     <p>{{insert next dialogue line here}}</p>
     <hr>
