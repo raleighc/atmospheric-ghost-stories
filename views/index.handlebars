@@ -1,17 +1,25 @@
 <body class="homePage">
 
-<h1>{{ghost-name}}</h1>
-<img src={{ghostImg}} id="ghostSprite" />
+	<h1>{{ghost-name}}</h1>
+	<img id="indexGhostSprite"src="https://ashlynimages.s3.us-east-2.amazonaws.com/kisspng-pixel-art-animated-film-ghost-5aff57d1ba3770.4820248215266836017628.png" alt="ghost"  />
 
-<container class="dialogueBox">
-	{{!-- ghost speech --}}
-	<p class="dialogue">{{insert current line of text here}}</p>
-	<p>{{insert next dialogue line here}}</p>
-	<hr>
-	<br>
-	{{!-- reaction from user --}}
-	<button id="positive">{{positive-response}}</button>
-	<button id="negative">{{negative-response}}</button>
-	<button id="run">RUN!</button>
-</container>
-	</body>
+	<div class="footer">
+		<container class="dialogueBox">
+			{{!-- ghost speech --}}
+			<div class="row">
+				<div class="large-6 columns">
+					<p class="dialogue">{{insert current line of text here}}</p>
+					<p>{{insert next dialogue line here}}</p>
+					<hr>
+					<br>
+				</div>
+				<div class="large-6 columns">
+					{{!-- reaction from user --}}
+					<button id="positive">{{positive-response}}</button>
+					<button id="negative">{{negative-response}}</button>
+					<button id="run">RUN!</button>
+				</div>
+			</div>
+		</container>
+	</div>
+</body>
