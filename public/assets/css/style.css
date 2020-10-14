@@ -1,15 +1,18 @@
 body.homePage{
     background-image: url(https://ashlynimages.s3.us-east-2.amazonaws.com/homePageImage.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: black;
 }
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    min-height: 250px;
     background-color: black;
     color: white;
     text-align: center;
  }
  #indexGhostSprite{
-     
  }
