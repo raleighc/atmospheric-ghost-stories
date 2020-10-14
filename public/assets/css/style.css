@@ -1,18 +1,46 @@
-body.homePage{
-    background-image: url(https://ashlynimages.s3.us-east-2.amazonaws.com/homePageImage.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-color: black;
+body.homePage {
+  /* background-image: url(https://ashlynimages.s3.us-east-2.amazonaws.com/homePageImage.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto; */
+  background-color: black;
 }
+#bg {
+  position: fixed;
+  top: 0;
+  z-index: -3;
+  background-color: black;
+  height: auto;
+  max-height: 800px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+/* .bgwidth {
+  width: auto;
+  height: auto;
+  max-width: 1200px;
+  max-height: 1200px;
+}
+.bgheight {
+  width: auto;
+  height: auto;
+  max-width: 1200px;
+} */
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    min-height: 250px;
-    background-color: black;
-    color: white;
-    text-align: center;
- }
- #indexGhostSprite{
- }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 250px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+#indexGhostSprite {
+    height: 200px;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 20%;
+    right: 35%;
+}
