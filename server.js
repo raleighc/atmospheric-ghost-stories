@@ -35,9 +35,10 @@ function introGhost() {
         deadFor: 170,
         homeTown: "Atlanta, Georgia",
         faveSport: res.data.sport,
-      }).then(() => {
-        ghostOneInfo();
       })
+        .then(() => {
+          ghostOneInfo();
+        })
         .catch(() => {
           console.log();
         });
@@ -55,9 +56,10 @@ function ghostOneInfo() {
         deadFor: 65,
         homeTown: "Arno, Virginia",
         faveSport: res.data.sport,
-      }).then(() => {
-        ghostTwoInfo();
       })
+        .then(() => {
+          ghostTwoInfo();
+        })
         .catch(() => {
           console.log();
         });
@@ -75,9 +77,10 @@ function ghostTwoInfo() {
         deadFor: 166,
         homeTown: "Cleveland, Ohio",
         faveSport: res.data.sport,
-      }).then(() => {
-        ghostThreeInfo();
       })
+        .then(() => {
+          ghostThreeInfo();
+        })
         .catch(() => {
           console.log();
         });
@@ -96,17 +99,15 @@ function ghostThreeInfo() {
         homeTown: "Liverpool, England",
         faveSport: res.data.sport,
       })
-      .catch(() => {
-        console.log();
-      })
-    .catch(() => {
-      console.log();
+        .catch(() => {
+          console.log();
+        })
+        .catch(() => {
+          console.log();
+        });
     });
-})
 }
 introGhost();
-
-
 
 // Views Routes
 app.use(userController);
@@ -120,9 +121,9 @@ app.get("/home", (req, res) => {
   res.render("home");
 });
 
-
 app.get("/room1", (req, res) => {
   res.render("room1");
+  // res.send({ msg: "hello" });
 });
 
 app.get("/room2", (req, res) => {
@@ -135,8 +136,8 @@ app.get("/room3", (req, res) => {
 // };
 
 // Syncing our sequelize models and then starting our Express app
-db.sequelize.sync({force: true}).then(function() {
-// db.sequelize.sync().then(function () {
+db.sequelize.sync({ force: true }).then(function () {
+  // db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });

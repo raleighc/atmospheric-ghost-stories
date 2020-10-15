@@ -1,14 +1,23 @@
-<body>
+<h1>{{ghost-name}}</h1>
+<div class="row">
+    <div class="medium-2 column"></div>
+    <div class="medium-8 column">
+        <img id="bg" class="backgroundImg"
+            src="https://images.8tracks.com/cover/i/012/335/362/2141676ec3dfc6c1272f09d02aac107f-1267.jpg?rect=0,259,563,563&q=98&fm=jpg&fit=max"
+            alt="backgroundImage" />
+    </div>
+    <div class="medium-2 column"></div>
+</div>
+{{!-- <img src="#" id="ghostSprite" alt="ghost_sprite" /> --}}
+<div class="row">
+    <div class="medium-1 column"></div>
+    <div class="medium-5 column">
+        <div class="row"><button id="positiveBtn">POSITIVE</button></div>
+        <div class="row"><button id="negativeBtn">NEGATIVE</button></div>
+        <div class="row"><button id="run">RUN!</button></div>
 
-    <h1>{{ghost-name}}</h1>
-
-    <img id="room1Background"
-        src="https://images.8tracks.com/cover/i/012/335/362/2141676ec3dfc6c1272f09d02aac107f-1267.jpg?rect=0,259,563,563&q=98&fm=jpg&fit=max"
-        alt="backgroundImage" />
-    <img src="" id="ghostSprite" alt="ghost_sprite" />
-
-    <container class="dialogueBox">
-
+    </div>
+    <div class="medium-5 column">
         <p id="dialogueOne"> `Hello, USERNAME. I’m sorry to bother you, but you looked lost. I didn’t mean to scare you.
             I
             just wanted to
@@ -28,7 +37,8 @@
         </p>
 
         <p>
-            {{#if positive}}`I was born in ATLANTA but I spent most of my life in this house. My husband, CHARLIE, and I
+            {{#if positive}}`I was born in ST. LOUIS but I spent most of my life in this house. My husband, CHARLIE, and
+            I
             loved this home. We raised our family here. My children took their first steps right over there by the
             fireplace. I somehow got stuck here forever. You will probably meet other spirits around here somewhere, so
             make
@@ -50,14 +60,10 @@
             {{else}}`GET OUT`
             {{/if}}
         </p>
-        {{!-- ^^this can be boiled down later --}}
-        <p class="dialogue">{{insert current line of text here}}</p>
-        <p>{{insert next dialogue line here}}</p>
-        <hr>
-        <br>
 
-        <button id="positiveBtn">{{positive-response}}</button>
-        <button id="negativeBtn">{{negative-response}}</button>
-        <button id="run">RUN!</button>
-    </container>
-</body>
+        <p class="dialogue">{{currentDialogue}}</p>
+        <p>{{nextDialogue}}</p>
+
+    </div>
+    <div class="medium-1 column"></div>
+</div>
