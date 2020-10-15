@@ -4,6 +4,7 @@ const exphbs = require("express-handlebars");
 const axios = require("axios");
 const db = require("./models");
 const userController = require("./controllers/userController");
+const htmlController = require("./controllers/htmlController")
 // const { Model } = require("sequelize/types");
 
 // Sets up the Express App
@@ -110,30 +111,33 @@ function ghostThreeInfo() {
 introGhost();
 
 // Views Routes
-app.use(userController);
+// app.use(userController);
+// app.use(htmlController);
+require("./controllers/userController")(app)
+require("./controllers/htmlController")(app)
 
 // module.exports = function () {
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// app.get("/", (req, res) => {
+//   res.render("index");
+// });
 
-app.get("/home", (req, res) => {
-  res.render("home");
-});
+// app.get("/home", (req, res) => {
+//   res.render("home");
+// });
 
-app.get("/room1", (req, res) => {
-  res.render("room1");
-  // res.send({ msg: "hello" });
-});
 
-app.get("/room2", (req, res) => {
-  res.render("room2");
-});
+// app.get("/room1", (req, res) => {
+//   res.render("room1");
+// });
 
-app.get("/room3", (req, res) => {
-  res.render("room3");
-});
-// };
+// app.get("rooms/room2", (req, res) => {
+//   res.render("room2");
+// });
+
+// app.get("rooms/room3", (req, res) => {
+//   res.render("room3");
+// });
+// // };
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync({ force: true }).then(function () {
