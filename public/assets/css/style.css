@@ -52,3 +52,18 @@ body.homePage {
   bottom: 20%;
   right: 35%;
 }
+.label-text{
+  color: white;
+}
+#nameForm{
+  display: block;
+}
+#ageForm{
+  display: none;
+}
+#genderForm{
+  display: none;
+}
+body.startFoyerPage{
+  background-color: black;
+}

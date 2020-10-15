@@ -13,12 +13,18 @@ $("#name-btn").on("click", function(event) {
       .then(function(data) {
         // log the data we found
         console.log(data);
-      });
-  
+        
+      }).end();
     // empty each input box by replacing the value with an empty string
-    $("#name").val("");
+    // $("#name").val("");
+
   
   });
+  function displayage(){
+    $("#nameForm").hide();
+    $("#ageForm").stop().show();
+    $("#genderForm").stop().hide();
+}
 
   $("#age-btn").on("click", function(event) {
     event.preventDefault();
@@ -42,6 +48,12 @@ $("#name-btn").on("click", function(event) {
 
   
   });
+  function displaygender(){
+    $("#nameForm").hide();
+    $("#ageForm").stop().hide();
+    $("#genderForm").stop().show();
+  };
+
   $("#gender-btn").on("click", function(event) {
     event.preventDefault();
   
