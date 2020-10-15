@@ -4,7 +4,8 @@ body.homePage {
   background-size: 100% auto; */
   background-color: black;
 }
-#bg {
+.bg {
+  justify-content: center;
   position: fixed;
   top: 0;
   z-index: -3;

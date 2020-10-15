@@ -27,28 +27,25 @@ app.get("/api/config", (req, res) => {
 });
 
 function ghostPopulation() {
-  for(let i = 0; i < 3; i++){
-  axios
-    .get("https://api.namefake.com/english-united-states/male/")
-    .then(function (res) {
-      db.Ghost.create({
-        fullName: res.data.name,
-        age: res.data.birth_data,
-        homeTown: res.data.address,
-        faveSport: res.data.sport,
-      })
-        .catch(() => {
+  for (let i = 0; i < 3; i++) {
+    axios
+      .get("https://api.namefake.com/english-united-states/male/")
+      .then(function (res) {
+        db.Ghost.create({
+          fullName: res.data.name,
+          age: res.data.birth_data,
+          homeTown: res.data.address,
+          faveSport: res.data.sport,
+        }).catch(() => {
           console.log();
         });
-    })
-    .catch(() => {
-      console.log();
-    });
+      })
+      .catch(() => {
+        console.log();
+      });
   }
 }
 ghostPopulation();
-
-
 
 // Views Routes
 app.use(userController);
@@ -62,9 +59,9 @@ app.get("/home", (req, res) => {
   res.render("home");
 });
 
-
 app.get("/room1", (req, res) => {
   res.render("room1");
+  // res.send({ msg: "hello" });
 });
 
 app.get("/room2", (req, res) => {
@@ -77,8 +74,8 @@ app.get("/room3", (req, res) => {
 // };
 
 // Syncing our sequelize models and then starting our Express app
-db.sequelize.sync({force: true}).then(function() {
-// db.sequelize.sync().then(function () {
+db.sequelize.sync({ force: true }).then(function () {
+  // db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
