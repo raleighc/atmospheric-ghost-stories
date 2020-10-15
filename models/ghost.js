@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
       // notNull: true,
       // notEmpty: true,
     },
-    age: {
+    deadFor: {
       type: DataTypes.STRING,
       // notNull: true,
       // notEmpty: true,
