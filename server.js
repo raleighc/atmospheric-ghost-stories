@@ -1,6 +1,7 @@
 // Requiring Dependencies
 const express = require("express");
 const exphbs = require("express-handlebars");
+const axios = require("axios");
 const db = require("./models");
 const userController = require("./controllers/userController");
 
@@ -24,6 +25,30 @@ app.get("/api/config", (req, res) => {
   });
 });
 
+function ghostPopulation() {
+  for(let i = 0; i < 3; i++){
+  axios
+    .get("https://api.namefake.com/english-united-states/male/")
+    .then(function (res) {
+      db.Ghost.create({
+        fullName: res.data.name,
+        age: res.data.birth_data,
+        homeTown: res.data.address,
+        faveSport: res.data.sport,
+      })
+        .catch(() => {
+          console.log();
+        });
+    })
+    .catch(() => {
+      console.log();
+    });
+  }
+}
+ghostPopulation();
+
+
+
 // Views Routes
 app.use(userController);
 
@@ -31,10 +56,14 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-// Syncing our sequelize models and then starting our Express app
-// db.sequelize.sync({force: true}).then(function() {
-db.sequelize.sync().then(function() {
-app.listen(PORT, function () {
-  console.log("App listening on PORT " + PORT);
+app.get("/home", (req, res) => {
+  res.render("home");
 });
+
+// Syncing our sequelize models and then starting our Express app
+db.sequelize.sync({force: true}).then(function() {
+// db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+  });
 });
