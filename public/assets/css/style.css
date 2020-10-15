@@ -12,9 +12,17 @@ body.homePage {
   height: auto;
   max-height: 700px;
 }
-.center{
-    display: flex;
-    justify-content: center;
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+#startBtn {
+  color: black;
+  padding: 15px;
+  border-style: solid;
+  border-color: white;
+  background-color: blueviolet;
 }
 /* .bgwidth {
   width: auto;
@@ -38,9 +46,9 @@ body.homePage {
   text-align: center;
 }
 #indexGhostSprite {
-    height: 200px;
-    opacity: 0.5;
-    position: absolute;
-    bottom: 20%;
-    right: 35%;
+  height: 200px;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 20%;
+  right: 35%;
 }
