@@ -11,3 +11,10 @@ $("#run").onclick = function () {
   // return to foyer
   window.location.href = "/index.handlebars/";
 };
+<<<<<<< HEAD
+=======
+
+// $("#startBtn").onclick = function () {
+
+// }
+>>>>>>> main

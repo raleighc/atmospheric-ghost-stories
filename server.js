@@ -4,6 +4,7 @@ const exphbs = require("express-handlebars");
 const axios = require("axios");
 const db = require("./models");
 const userController = require("./controllers/userController");
+// const { Model } = require("sequelize/types");
 
 // Sets up the Express App
 const app = express();
@@ -52,6 +53,7 @@ ghostPopulation();
 // Views Routes
 app.use(userController);
 
+// module.exports = function () {
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -59,6 +61,20 @@ app.get("/", (req, res) => {
 app.get("/home", (req, res) => {
   res.render("home");
 });
+
+
+app.get("/room1", (req, res) => {
+  res.render("room1");
+});
+
+app.get("rooms/room2", (req, res) => {
+  res.render("room2");
+});
+
+app.get("rooms/room3", (req, res) => {
+  res.render("room3");
+});
+// };
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync({force: true}).then(function() {
