@@ -4,7 +4,7 @@ $("#name-btn").on("click", function(event) {
     // make a userName obj
     var userName = {
       // name from name input
-      name: $("#name").val().trim(),
+      fullName: $("#fullName").val().trim(),
     };
   
     // send an AJAX POST-request with jQuery
