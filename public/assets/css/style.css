@@ -4,7 +4,8 @@ body.homePage {
   background-size: 100% auto; */
   background-color: black;
 }
-#bg {
+.bg {
+  justify-content: center;
   position: fixed;
   top: 0;
   z-index: -3;
@@ -24,6 +25,7 @@ body.homePage {
   border-color: white;
   background-color: blueviolet;
 }
+
 /* .bgwidth {
   width: auto;
   height: auto;
@@ -62,6 +64,15 @@ body.homePage {
   display: none;
 }
 #genderForm{
+  display: none;
+}
+#foyerOption1{
+  display: none;
+}
+#foyerStayChoice{
+  display: none;
+}
+#foyerRoomChoice{
   display: none;
 }
 body.startFoyerPage{

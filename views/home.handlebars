@@ -26,25 +26,38 @@
 
 						<div class="form-group">
 							<label class="label-text" for="fullName">AH! Hello. You scared me. I wasn’t expecting you.
-								My name is
+								My name is GHOST NAME HERE
 								{{!-- {{Intro Ghost}} --}}
 								What is your name?</label>
 							<input type="text" id="fullName" name="fullName">
 						</div>
 						<div class="nameSubmitBtn">
-							<button onclick="displayage()" class="button secondary" id="name-btn" for="fullName"
+							<button onclick="displaystay()" class="button secondary" id="name-btn" for="fullName"
 								type="submit" name="fullName">Add
 								Name</button>
 						</div>
 					</form>
-					<form id="ageForm" class="create-form" onsubmit="return false" >
+					<div id="foyerOption1" class="ghost-speech" onsubmit="return false">
+
+						<div>
+							<label class="label-text" for="fullName">Pleased to meet you USER NAME
+								{{!-- {{User Name}}.  --}}
+								No need to be scared, we are only ghosts.
+								<br>
+								Oh the door is locked? How did that happen? Were you trying to leave already?</label>
+						</div>
+
+					</div>
+
+					<form id="ageForm" class="create-form" onsubmit="return false">
 
 						<div class="form-group">
 							<label class="label-text" for="age">What is your age?</label>
 							<input type="text" id="age" name="age">
 						</div>
 						<div class="ageSubmitBtn">
-							<button onclick="displaygender()" class="button secondary" id="age-btn" for="age" type="submit" name="age">Add
+							<button onclick="displaygender()" class="button secondary" id="age-btn" for="age"
+								type="submit" name="age">Add
 								Age</button>
 						</div>
 					</form>
@@ -65,15 +78,23 @@
 					<br>
 				</div>
 				<div class="cell small-4 large-4">
-					<p>Which room would you like to enter?</p>
-					<a class="button secondary" href="/room1" id="ghostOne">Room 1</a>
-					<a class="button secondary" href="/room2" id="ghostTwo">Room 2</a>
-					<a class="button secondary" href="/room3" id="ghostThree">Room 3</a>
-
+					<div id="foyerStayChoice">
+					<div class="nameSubmitBtn">
+						<button onclick="displayPosFoyer()" class="button secondary" id="foyer-pos-btn" type="submit"
+							name="posFoyer">Yes, get me out of here!</button>
+					</div>
+					<div class="nameSubmitBtn">
+						<button onclick="displayNegFoyer()" class="button secondary" id="foyer-neg-btn" type="submit"
+							name="negFoyer">No, I would never leave so soon.</button>
+					</div>
+					</div>
+					<div id="foyerRoomChoice">
+						<p>Which room would you like to enter?</p>
+						<a class="button secondary" href="/room1" id="ghostOne">Room 1</a>
+						<a class="button secondary" href="/room2" id="ghostTwo">Room 2</a>
+						<a class="button secondary" href="/room3" id="ghostThree">Room 3</a>
+					</div>
 				</div>
 			</div>
 		</container>
 	</div>
-
-
-</body>

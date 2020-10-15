@@ -20,9 +20,11 @@ $("#name-btn").on("click", function(event) {
 
   
   });
-  function displayage(){
+  function displaystay(){
     $("#nameForm").hide();
-    $("#ageForm").stop().show();
+    $("#foyerOption1").stop().show();
+    $("#foyerStayChoice").stop().show();
+    $("#ageForm").stop().hide();
     $("#genderForm").stop().hide();
 }
 
