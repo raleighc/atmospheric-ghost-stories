@@ -10,7 +10,7 @@ body.homePage {
   z-index: -3;
   background-color: black;
   height: auto;
-  max-height: 800px;
+  max-height: 700px;
 }
 .center{
     display: flex;
