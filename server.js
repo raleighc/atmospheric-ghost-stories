@@ -26,26 +26,88 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-function ghostPopulation() {
-  for (let i = 0; i < 3; i++) {
-    axios
-      .get("https://api.namefake.com/english-united-states/male/")
-      .then(function (res) {
-        db.Ghost.create({
-          fullName: res.data.name,
-          age: res.data.birth_data,
-          homeTown: res.data.address,
-          faveSport: res.data.sport,
-        }).catch(() => {
+function introGhost() {
+  axios
+    .get("https://api.namefake.com/english-united-states/female/")
+    .then(function (res) {
+      db.Ghost.create({
+        fullName: res.data.name,
+        deadFor: 170,
+        homeTown: "Atlanta, Georgia",
+        faveSport: res.data.sport,
+      })
+        .then(() => {
+          ghostOneInfo();
+        })
+        .catch(() => {
           console.log();
         });
-      })
-      .catch(() => {
-        console.log();
-      });
-  }
+    })
+    .catch(() => {
+      console.log();
+    });
 }
-ghostPopulation();
+function ghostOneInfo() {
+  axios
+    .get("https://api.namefake.com/english-united-states/female/")
+    .then(function (res) {
+      db.Ghost.create({
+        fullName: res.data.name,
+        deadFor: 65,
+        homeTown: "Arno, Virginia",
+        faveSport: res.data.sport,
+      })
+        .then(() => {
+          ghostTwoInfo();
+        })
+        .catch(() => {
+          console.log();
+        });
+    })
+    .catch(() => {
+      console.log();
+    });
+}
+function ghostTwoInfo() {
+  axios
+    .get("https://api.namefake.com/english-united-states/male/")
+    .then(function (res) {
+      db.Ghost.create({
+        fullName: res.data.name,
+        deadFor: 166,
+        homeTown: "Cleveland, Ohio",
+        faveSport: res.data.sport,
+      })
+        .then(() => {
+          ghostThreeInfo();
+        })
+        .catch(() => {
+          console.log();
+        });
+    })
+    .catch(() => {
+      console.log();
+    });
+}
+function ghostThreeInfo() {
+  axios
+    .get("https://api.namefake.com/english-united-states/male/")
+    .then(function (res) {
+      db.Ghost.create({
+        fullName: res.data.name,
+        deadFor: 272,
+        homeTown: "Liverpool, England",
+        faveSport: res.data.sport,
+      })
+        .catch(() => {
+          console.log();
+        })
+        .catch(() => {
+          console.log();
+        });
+    });
+}
+introGhost();
 
 // Views Routes
 app.use(userController);
