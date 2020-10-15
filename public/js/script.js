@@ -10,4 +10,4 @@ $("#negativeBtn").on("click", function (req, res) {
 $("#run").onclick = function () {
   // return to foyer
   window.location.href = "/index.handlebars/";
-});
+};
