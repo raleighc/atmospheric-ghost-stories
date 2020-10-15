@@ -67,11 +67,11 @@ app.get("/room1", (req, res) => {
   res.render("room1");
 });
 
-app.get("rooms/room2", (req, res) => {
+app.get("/room2", (req, res) => {
   res.render("room2");
 });
 
-app.get("rooms/room3", (req, res) => {
+app.get("/room3", (req, res) => {
   res.render("room3");
 });
 // };
