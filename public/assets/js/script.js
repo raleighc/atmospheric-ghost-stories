@@ -12,3 +12,8 @@ $("#run").onclick = function () {
   window.location.href = "/index.handlebars/";
 };
 
+
+// $("#startBtn").onclick = function () {
+
+// }
+
