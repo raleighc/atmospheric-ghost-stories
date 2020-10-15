@@ -5,13 +5,12 @@ body.homePage {
   background-color: black;
 }
 .bg {
-  justify-content: center;
   position: fixed;
   top: 0;
   z-index: -3;
   background-color: black;
   height: auto;
-  max-height: 700px;
+  max-height: 650px;
 }
 .center {
   display: flex;
@@ -53,18 +52,18 @@ body.homePage {
   bottom: 20%;
   right: 35%;
 }
-.label-text{
+.label-text {
   color: white;
 }
-#nameForm{
+#nameForm {
   display: block;
 }
-#ageForm{
+#ageForm {
   display: none;
 }
-#genderForm{
+#genderForm {
   display: none;
 }
-body.startFoyerPage{
+body.startFoyerPage {
   background-color: black;
 }

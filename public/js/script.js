@@ -1,6 +1,10 @@
+// $(window).on("load", function () {
+//   $("#dialogue1").text(storyOne[0].val);
+// });
+
 // adding event listeners to user choice buttons
 $("#positiveBtn").on("click", function (req, res) {
-  //  prompt positive 1 response
+  console.log("is clicked");
 });
 
 $("#negativeBtn").on("click", function (req, res) {
@@ -9,7 +13,7 @@ $("#negativeBtn").on("click", function (req, res) {
 
 $("#run").onclick = function () {
   // return to foyer
-  window.location.href = "/index.handlebars/";
+  window.location.href = "/";
 };
 
 // $("#startBtn").onclick = function () {
@@ -19,17 +23,12 @@ $("#run").onclick = function () {
 storyOne = [
   {
     pos1: `Hello, {{userName}}. I’m sorry to bother you, but you looked lost. I didn’t mean to scare you.
-            I
-            just wanted to
-            make
-            sure you were alright. You seem...distracted. You just walked in here with a dazed look. Do you need
-            anything?
-            What's your name?`,
+            I just wanted to make sure you were alright. You seem...distracted. You just walked in here with 
+            a dazed look. Do you need anything?`,
   },
   {
     pos2: `My name is {{ghostName}}, and this is my home. Welcome. I’m sorry for the mess, there’s only
-            so
-            much I can do around here these days. It’s been so long since I’ve had new company.`,
+            so much I can do around here these days. It’s been so long since I’ve had new company.`,
   },
   {
     neg2: `Oh, calm down. My name is {{ghostName}} and this is my home. Normally I would welcome visitors, please
@@ -55,6 +54,12 @@ storyOne = [
     neg4: `GET OUT`,
   },
 ];
+
+// userResponseRoom1 = [{
+//   pos1:
+// }]
+
+console.log(storyOne[0].val);
 
 storyTwo = [
   {
