@@ -4,13 +4,14 @@ body.homePage {
   background-size: 100% auto; */
   background-color: black;
 }
-#bg {
+.bg {
+  justify-content: center;
   position: fixed;
   top: 0;
   z-index: -3;
   background-color: black;
   height: auto;
-  max-height: 800px;
+  max-height: 700px;
 }
 .center {
   display: flex;
@@ -51,4 +52,19 @@ body.homePage {
   position: absolute;
   bottom: 20%;
   right: 35%;
+}
+.label-text{
+  color: white;
+}
+#nameForm{
+  display: block;
+}
+#ageForm{
+  display: none;
+}
+#genderForm{
+  display: none;
+}
+body.startFoyerPage{
+  background-color: black;
 }
