@@ -11,3 +11,7 @@ $("#run").onclick = function () {
   // return to foyer
   window.location.href = "/index.handlebars/";
 };
+
+// $("#startBtn").onclick = function () {
+
+// }
