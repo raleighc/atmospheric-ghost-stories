@@ -117,3 +117,5 @@ $(document).ready(function () {
     $("#foyerLastPrompt").stop().show();
   }
 });
+
+$(document).foundation();
