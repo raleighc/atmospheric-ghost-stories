@@ -11,8 +11,10 @@ $(document).ready(function () {
     // send an AJAX POST-request with jQuery
     $.post("/api/users", userName)
       // on success, run this callback
-      .then(() => {
+      .then((response) => {
+        $(".characterName").text(response.fullName);
         // displayAge();
+        console.log(response);
         displaystay();
       });
     // empty each input box by replacing the value with an empty string
