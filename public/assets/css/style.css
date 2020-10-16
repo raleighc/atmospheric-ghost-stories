@@ -11,7 +11,7 @@ body.homePage {
   background-color: black;
   max-height: 700px;
   height: auto;
-  
+
   height: auto;
   max-height: 650px;
 }
@@ -44,10 +44,11 @@ body.homePage {
   left: 0;
   bottom: 0;
   width: 100%;
-  max-height: 250px;
+  height: 250px;
   background-color: black;
   color: white;
   text-align: center;
+  overflow-y:scroll; 
 }
 #indexGhostSprite {
   height: 200px;
@@ -107,3 +108,4 @@ body.startFoyerPage {
 .hide {
   display: none;
 }
+

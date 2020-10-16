@@ -116,6 +116,7 @@ $(document).ready(function () {
     $("#foyerRoomChoice").stop().show();
     $("#foyerLastPrompt").stop().show();
   }
+  $(document).foundation();
 });
 
 $(document).foundation();
