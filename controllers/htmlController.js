@@ -7,13 +7,7 @@ module.exports = function (app) {
     res.render("index");
   });
 
-  app.get("/home", (req, res) => {
-    // create a random number function
-    // let randoNumObj = {
-    //   num1:"1",
-    //   num2:"2",
-    //   num3:"4"
-    // }
+  app.get("/home/:id", (req, res) => {
     res.render("home");
   });
 
