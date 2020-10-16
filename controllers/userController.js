@@ -15,12 +15,27 @@ module.exports = function (app) {
         // first Database call has returned here
         // console.log(data);
         // create a temp Ghost object
-        let entryGhost = {
+        let tempGhost = {
           fullName: data.fullName,
           deadFor: data.deadFor,
         };
-        // res.render("home", data.fullName);
-        res.render("home", {entryGhost});
+        return tempGhost;
+      })
+      .then(function (response) {
+        // this should be our tempGhost OBJECT
+        // console.log(response);
+        // make our second DB call
+        db.User.findAll({}).then(function (user) {
+          // did we get the User?
+          // console.log(user);
+          let userObj = {
+            // fullName: user.fullName,
+            fullName: "Toby",
+            // age: user.age,
+            // gender: user.gender
+          };
+          res.render("home", { entryGhost: response, viewUser: userObj });
+        });
       })
       .catch((err) => {
         console.log(err);
