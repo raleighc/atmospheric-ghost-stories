@@ -8,7 +8,7 @@
 			<div class="center">
 				<img src="https://ashlynimages.s3.us-east-2.amazonaws.com/FoyerImage.png" id="bg" alt="foyerImg">
 
-				<h1>{{ghost-name}}</h1>
+				<h1>{{entryGhost.fullName}}</h1>
 				<img id="indexGhostSprite"
 					src="https://ashlynimages.s3.us-east-2.amazonaws.com/kisspng-pixel-art-animated-film-ghost-5aff57d1ba3770.4820248215266836017628.png"
 					alt="ghost" />
@@ -26,8 +26,8 @@
 
 						<div class="form-group">
 							<label class="label-text" for="fullName">AH! Hello. You scared me. I wasn’t expecting you.
-								My name is GHOST NAME HERE
-								{{!-- {{Intro Ghost}} --}}
+								My name is
+								{{entryGhost.fullName}}
 								What is your name?</label>
 							<input type="text" id="fullName" name="fullName">
 						</div>
@@ -142,15 +142,17 @@
 								Gender</button>
 						</div>
 					</form>
+<<<<<<< HEAD
 					<div id="foyerRoomChoice">
 						<p>Which room would you like to enter?</p>
-						<a class="button secondary" href="/room1" id="ghostOne">Room 1</a>
+						<a class="button secondary" href="/room1/2" id="ghostOne">Room 1</a>
 						<br>
-						<a class="button secondary" href="/room2" id="ghostTwo">Room 2</a>
+						<a class="button secondary" href="/room2/3" id="ghostTwo">Room 2</a>
 						<br>
-						<a class="button secondary" href="/room3" id="ghostThree">Room 3</a>
+						<a class="button secondary" href="/room3/4" id="ghostThree">Room 3</a>
 					</div>
 				</div>
 			</div>
 		</container>
 	</div>
+
