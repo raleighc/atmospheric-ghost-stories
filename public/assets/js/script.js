@@ -13,6 +13,18 @@ $(document).ready(function () {
     console.log("this clicked");
     $("#interaction1-0").removeClass("hide");
   });
+  // first response option
+  $("#positiveBtn").on("click", function (event) {
+    event.preventDefault();
+    $("#interaction1-0").addClass("hide");
+    $("#interaction1-1").removeClass("hide");
+  });
+  $("#negativeBtn").on("click", function (event) {
+    event.preventDefault();
+    $("#interaction1-0").addClass("hide");
+    $("#interaction1-2").removeClass("hide");
+  });
+  // second response option
   $("#positiveBtn").on("click", function (event) {
     event.preventDefault();
     $("#interaction1-0").addClass("hide");
