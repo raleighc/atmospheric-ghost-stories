@@ -20,11 +20,48 @@ $("#name-btn").on("click", function(event) {
 
   
   });
-  function displayage(){
+  function displaystay(){
     $("#nameForm").hide();
-    $("#ageForm").stop().show();
+    $("#foyerOption1").stop().show();
+    $("#foyerStayChoice").stop().show();
+    $("#foyerPosRes").stop().hide();
+    $("#foyerNegRes").stop().hide();
+    $("#ageForm").stop().hide();
     $("#genderForm").stop().hide();
-}
+    $("#foyerAgeGender").stop().hide();
+    
+};
+function displayPosFoyer(){
+  $("#nameForm").hide();
+  $("#foyerOption1").stop().hide();
+  $("#foyerStayChoice").stop().hide();
+  $("#foyerPosRes").stop().show();
+  $("#foyerNegRes").stop().hide();
+  $("#ageForm").stop().hide();
+  $("#genderForm").stop().hide();
+  $("#foyerAgeGender").stop().hide();
+};
+function displayNegFoyer(){
+  $("#nameForm").hide();
+  $("#foyerOption1").stop().hide();
+  $("#foyerStayChoice").stop().hide();
+  $("#foyerPosRes").stop().hide();
+  $("#foyerNegRes").stop().show();
+  $("#ageForm").stop().hide();
+  $("#genderForm").stop().hide();
+  $("#foyerAgeGender").stop().hide();
+};
+
+function displaygender(){
+  $("#nameForm").hide();
+  $("#foyerOption1").stop().hide();
+  $("#foyerStayChoice").stop().hide();
+  $("#foyerPosRes").stop().hide();
+  $("#foyerNegRes").stop().hide();
+  $("#ageForm").stop().show();
+  $("#genderForm").stop().show();
+  $("#foyerAgeGender").stop().show();
+};
 
   $("#age-btn").on("click", function(event) {
     event.preventDefault();
@@ -45,14 +82,8 @@ $("#name-btn").on("click", function(event) {
   
     // empty each input box by replacing the value with an empty string
     $("#age").val("");
-
-  
   });
-  function displaygender(){
-    $("#nameForm").hide();
-    $("#ageForm").stop().hide();
-    $("#genderForm").stop().show();
-  };
+
 
   $("#gender-btn").on("click", function(event) {
     event.preventDefault();
@@ -75,3 +106,15 @@ $("#name-btn").on("click", function(event) {
     $("#name").val("");
   
   });
+  function displaylast(){
+    $("#nameForm").hide();
+    $("#foyerOption1").stop().hide();
+    $("#foyerStayChoice").stop().hide();
+    $("#foyerPosRes").stop().hide();
+    $("#foyerNegRes").stop().hide();
+    $("#ageForm").stop().hide();
+    $("#genderForm").stop().hide();
+    $("#foyerAgeGender").stop().hide();
+    $("#foyerRoomChoice").stop().show();
+    $("#foyerLastPrompt").stop().show();
+  };
