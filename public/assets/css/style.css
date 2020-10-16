@@ -67,3 +67,6 @@ body.homePage {
 body.startFoyerPage {
   background-color: black;
 }
+.hide {
+  display: none;
+}
