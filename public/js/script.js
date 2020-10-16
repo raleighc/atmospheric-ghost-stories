@@ -3,13 +3,21 @@
 // });
 
 // adding event listeners to user choice buttons
-$("#positiveBtn").on("click", function (req, res) {
+$("#positiveBtn").on("click", function (event) {
   console.log("is clicked");
+  event.preventDefault();
+  $("#interaction1.0").addClass("show");
+  $("#interaction1.1").addClass("hide");
+  $("#interaction1.2").addClass("hide");
+  $("#interaction1.3").addClass("hide");
+  $("#interaction1.4").addClass("hide");
+  $("#interaction1.5").addClass("hide");
+  $("#interaction1.6").addClass("hide");
 });
 
-$("#negativeBtn").on("click", function (req, res) {
-  // prompt negative 1 response
-});
+// $("#negativeBtn").on("click", function (req, res) {
+//   // prompt negative 1 response
+// });
 
 $("#run").onclick = function () {
   // return to foyer
