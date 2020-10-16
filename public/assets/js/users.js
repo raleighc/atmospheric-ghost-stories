@@ -1,26 +1,25 @@
-$("#name-btn").on("click", function(event) {
+$(document).ready(function () {
+  $("#name-btn").on("click", function (event) {
     event.preventDefault();
-  
+
     // make a userName obj
     var userName = {
       // name from name input
       fullName: $("#fullName").val().trim(),
     };
-  
+    // console.log(userName);
     // send an AJAX POST-request with jQuery
-    $.post("/api/username", userName)
+    $.post("/api/users", userName)
       // on success, run this callback
-      .then(function(data) {
-        // log the data we found
-        console.log(data);
-        
-      }).end();
+      .then(() => {
+        // displayAge();
+        displaystay();
+      });
     // empty each input box by replacing the value with an empty string
-    // $("#name").val("");
-
-  
+    // $("#name-btn").val("");
   });
-  function displaystay(){
+
+  function displaystay() {
     $("#nameForm").hide();
     $("#foyerOption1").stop().show();
     $("#foyerStayChoice").stop().show();
@@ -29,84 +28,81 @@ $("#name-btn").on("click", function(event) {
     $("#ageForm").stop().hide();
     $("#genderForm").stop().hide();
     $("#foyerAgeGender").stop().hide();
-    
-};
-function displayPosFoyer(){
-  $("#nameForm").hide();
-  $("#foyerOption1").stop().hide();
-  $("#foyerStayChoice").stop().hide();
-  $("#foyerPosRes").stop().show();
-  $("#foyerNegRes").stop().hide();
-  $("#ageForm").stop().hide();
-  $("#genderForm").stop().hide();
-  $("#foyerAgeGender").stop().hide();
-};
-function displayNegFoyer(){
-  $("#nameForm").hide();
-  $("#foyerOption1").stop().hide();
-  $("#foyerStayChoice").stop().hide();
-  $("#foyerPosRes").stop().hide();
-  $("#foyerNegRes").stop().show();
-  $("#ageForm").stop().hide();
-  $("#genderForm").stop().hide();
-  $("#foyerAgeGender").stop().hide();
-};
+  }
 
-function displaygender(){
-  $("#nameForm").hide();
-  $("#foyerOption1").stop().hide();
-  $("#foyerStayChoice").stop().hide();
-  $("#foyerPosRes").stop().hide();
-  $("#foyerNegRes").stop().hide();
-  $("#ageForm").stop().show();
-  $("#genderForm").stop().show();
-  $("#foyerAgeGender").stop().show();
-};
-
-  $("#age-btn").on("click", function(event) {
+  $("#foyer-pos-btn").on("click", function (event) {
     event.preventDefault();
-  
+    displayPosFoyer();
+  });
+
+  function displayPosFoyer() {
+    $("#nameForm").hide();
+    $("#foyerOption1").stop().hide();
+    $("#foyerStayChoice").stop().hide();
+    $("#foyerPosRes").stop().show();
+    $("#foyerNegRes").stop().hide();
+    $("#ageForm").stop().hide();
+    $("#genderForm").stop().hide();
+    $("#foyerAgeGender").stop().hide();
+  }
+
+  $("#foyer-neg-btn").on("click", function (event) {
+    event.preventDefault();
+    displayNegFoyer();
+  });
+
+  function displayNegFoyer() {
+    $("#nameForm").hide();
+    $("#foyerOption1").stop().hide();
+    $("#foyerStayChoice").stop().hide();
+    $("#foyerPosRes").stop().hide();
+    $("#foyerNegRes").stop().show();
+    $("#ageForm").stop().hide();
+    $("#genderForm").stop().hide();
+    $("#foyerAgeGender").stop().hide();
+  }
+
+  $("#posNext-btn").on("click", function (event) {
+    event.preventDefault();
+    displaygender();
+  });
+  $("#negNext-btn").on("click", function (event) {
+    event.preventDefault();
+    displaygender();
+  });
+
+  function displaygender() {
+    $("#nameForm").hide();
+    $("#foyerOption1").stop().hide();
+    $("#foyerStayChoice").stop().hide();
+    $("#foyerPosRes").stop().hide();
+    $("#foyerNegRes").stop().hide();
+    $("#ageForm").stop().show();
+    $("#genderForm").stop().show();
+    $("#foyerAgeGender").stop().show();
+  }
+
+  $("#age-btn").on("click", function (event) {
+    event.preventDefault();
+
     // make a userAge obj
-    var userAge = {
+    var userUpdate = {
       // age from age input
-      age: $("#age").val().trim(),
+      age: $("#age").val(),
+      gender: $("#gender").val(),
     };
-  
-    // send an AJAX POST-request with jQuery
-    $.post("/api/userage", userAge)
-      // on success, run this callback
-      .then(function(data) {
-        // log the data we found
-        console.log(data);
-      });
-  
-    // empty each input box by replacing the value with an empty string
-    $("#age").val("");
-  });
+    console.log(userUpdate);
+    $.ajax({
+      method: "PUT",
+      url: "/api/users",
+      data: userUpdate,
+    }).then(userUpdate);
 
-
-  $("#gender-btn").on("click", function(event) {
-    event.preventDefault();
-  
-    // make a userName obj
-    var userGender = {
-      // name from name input
-      name: $("#name").val().trim(),
-    };
-  
-    // send an AJAX POST-request with jQuery
-    $.post("/api/usegender", userGender)
-      // on success, run this callback
-      .then(function(data) {
-        // log the data we found
-        console.log(data);
-      });
-  
-    // empty each input box by replacing the value with an empty string
-    $("#name").val("");
-  
+    displaylast()
+    
   });
-  function displaylast(){
+  
+  function displaylast() {
     $("#nameForm").hide();
     $("#foyerOption1").stop().hide();
     $("#foyerStayChoice").stop().hide();
@@ -117,4 +113,7 @@ function displaygender(){
     $("#foyerAgeGender").stop().hide();
     $("#foyerRoomChoice").stop().show();
     $("#foyerLastPrompt").stop().show();
-  };
+  }
+});
+
+$(document).foundation();

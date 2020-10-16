@@ -12,57 +12,206 @@
 <div class="row">
     <div class="medium-1 column"></div>
     <div class="medium-5 column">
-        <div class="row"><button id="positiveBtn">POSITIVE</button></div>
-        <div class="row"><button id="negativeBtn">NEGATIVE</button></div>
-        <div class="row"><button id="run">RUN!</button></div>
+        <button type="button" class="button secondary show" id="gogoGhostie">Go go ghostie</button>
+
+
+        {{!-- initial greeting from Ghost 1 --}}
+        <form id="interaction1-0" class="create-form hide" onsubmit="return false">
+
+            <div class="form-group">
+
+                <p> `Hello, USERNAME. I’m sorry to bother you, but you looked lost. I
+                    didn’t
+                    mean to scare you.
+                    I just wanted to make sure you were alright. You seem...distracted. You just walked in here with a
+                    dazed look. Do you need
+                    anything?
+                </p>
+
+            </div>
+            {{!-- pos show 1.1 --}}
+            <div id="positiveBtn">
+                <button class="button secondary" id="posBtn1" for="positive" type="submit" name="posBtn">POSITIVE
+                </button>
+            </div>
+            {{!-- neg show 1.2 --}}
+            <div id="negativeBtn">
+                <button class="button secondary" id="negBtn1" for="negative" type="submit" name="negBtn">NEGATIVE
+                </button>
+            </div>
+            <a href="/">
+                <button class="run hide">RUN!</button>
+            </a>
+        </form>
+        {{!-- if positive first user response show 1.1 --}}
+        <form id="interaction1-1" class="create-form hide" onsubmit="return false">
+
+            <div class="form-group">
+
+                <p>
+                    My name is GERTRUDE, and this is my home. Welcome. I’m sorry for the mess, there’s only
+                    so
+                    much I can do around here these days. It’s been so long since I’ve had new company.`
+                </p>
+
+            </div>
+            {{!-- pos show 1.3 --}}
+            <div class="positiveBtn2">
+                <button class="button secondary" id="posBtn2" for="positive" type="submit" name="posBtn">POSITIVE
+                </button>
+            </div>
+            {{!-- pos show 1.4 --}}
+            <div class="negativeBtn2">
+                <button class="button secondary" id="negBtn2" for="negative" type="submit" name="negBtn">NEGATIVE
+                </button>
+            </div>
+            <a href="/">
+                <button class="run">RUN!</button>
+            </a>
+        </form>
+        {{!-- if negative first user response show 1.2--}}
+        <form id="interaction1-2" class="create-form hide" onsubmit="return false">
+
+            <div class="form-group">
+
+                <p>
+                    Oh, calm down. My name is GERTRUDE and this is my home. Normally I would welcome visitors, please
+                    be kind and don’t make me change my mind.
+                </p>
+
+            </div>
+            {{!-- pos show 1.5 --}}
+            <div class="positiveBtn3">
+                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
+                </button>
+            </div>
+            {{!-- neg show 1.6 --}}
+            <div class="negativeBtn3">
+                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">NEGATIVE
+                </button>
+            </div>
+            <a href="/">
+                <button class="run">RUN!</button>
+            </a>
+        </form>
+        {{!-- if positive second user response show 1.3 --}}
+        <form id="interaction1-3" class="create-form hide" onsubmit="return false">
+
+            <div class="form-group">
+
+                <p class="hide">
+                    I was born in ST. LOUIS but I spent most of my life in this house. My husband, CHARLIE, and
+                    I
+                    loved this home. We raised our family here. My children took their first steps right over there by
+                    the
+                    fireplace. I somehow got stuck here forever. You will probably meet other spirits around here
+                    somewhere, so
+                    make
+                    sure to stay on their good side, or you won’t get the key so you can leave. Can you help?
+                </p>
+
+            </div>
+            {{!-- pos show 1.7 --}}
+            <div class="positiveBtn">
+                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
+                </button>
+            </div>
+            {{!-- neg show 1.8 --}}
+            <div class="negativeBtn">
+                <button onclick="startConvo1x7()" class="button secondary" id="negBtn3" for="negative" type="submit"
+                    name="negBtn">NEGATIVE
+                </button>
+            </div>
+            <a href="/">
+                <button class="run hide">RUN!</button>
+            </a>
+        </form>
+        {{!-- if negative second user response show 1.4--}}
+        <form id="interaction1-4" class="create-form hide" onsubmit="return false">
+
+            <div class="form-group">
+
+                <p>
+                    This is my home. Do not speak of it like that. I worked my whole life for this house. Are you going
+                    to
+                    help us or not?
+                </p>
+
+            </div>
+            {{!-- pos show 1.7 --}}
+            <div class="positiveBtn">
+                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
+                </button>
+            </div>
+            {{!-- neg show 1.8 --}}
+            <div class="negativeBtn">
+                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">NEGATIVE
+                </button>
+            </div>
+            <a href="/">
+                <button class="run hide">RUN!</button>
+            </a>
+        </form>
+        <form id="interaction1-5" class="create-form hide" onsubmit="return false">
+
+            <div class="form-group">
+
+                <p>
+                    They are other spirits like myself, who were trapped here throughout time, but we want to
+                    leave
+                    now. When I died in a BMX accident, I just couldn’t let myself leave here. And now I’m stuck. Just
+                    give
+                    the
+                    others one of these keys and get on their good side to convince them to leave the house for good. If
+                    you
+                    help
+                    me, I can leave.`
+                </p>
+
+            </div>
+            {{!-- pos show 1.7 --}}
+            <div class="positiveBtn">
+                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
+                </button>
+            </div>
+            {{!-- neg show 1.8 --}}
+            <div class="negativeBtn">
+                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">NEGATIVE
+                </button>
+            </div>
+            <a href="/">
+                <button class="run hide">RUN!</button>
+            </a>
+        </form>
+        <form id="interaction1-5" class="create-form hide" onsubmit="return false">
+
+            <div class="form-group">
+
+                <p>
+                    GET OUT
+                </p>
+
+            </div>
+            {{!-- pos show 1.7 --}}
+            <div class="positiveBtn">
+                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
+                </button>
+            </div>
+            {{!-- neg show 1.8 --}}
+            <div class="negativeBtn">
+                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">NEGATIVE
+                </button>
+            </div>
+            <a href="/">
+                <button class="run hide">RUN!</button>
+            </a>
+        </form>
+
+
 
     </div>
     <div class="medium-5 column">
-        <p id="dialogueOne"> `Hello, USERNAME. I’m sorry to bother you, but you looked lost. I didn’t mean to scare you.
-            I
-            just wanted to
-            make
-            sure you were alright. You seem...distracted. You just walked in here with a dazed look. Do you need
-            anything?
-            What's your name?`
-        </p>
 
-        <p>
-            {{#if positive}}`My name is GERTRUDE, and this is my home. Welcome. I’m sorry for the mess, there’s only
-            so
-            much I can do around here these days. It’s been so long since I’ve had new company.`
-            {{else}}`Oh, calm down. My name is GERTRUDE and this is my home. Normally I would welcome visitors, please
-            be kind and don’t make me change my mind.`
-            {{/if}}
-        </p>
-
-        <p>
-            {{#if positive}}`I was born in ST. LOUIS but I spent most of my life in this house. My husband, CHARLIE, and
-            I
-            loved this home. We raised our family here. My children took their first steps right over there by the
-            fireplace. I somehow got stuck here forever. You will probably meet other spirits around here somewhere, so
-            make
-            sure to stay on their good side, or you won’t get the key so you can leave. Can you help?`
-            {{else}}`This is my home. Do not speak of it like that. I worked my whole life for this house. Are you going
-            to
-            help us or not?`
-            {{/if}}
-        </p>
-
-        <p>
-            {{#if positive}}`They are other spirits like myself, who were trapped here throughout time, but we want to
-            leave
-            now. When I died in a BMX accident, I just couldn’t let myself leave here. And now I’m stuck. Just give
-            the
-            others one of these keys and get on their good side to convince them to leave the house for good. If you
-            help
-            me, I can leave.`
-            {{else}}`GET OUT`
-            {{/if}}
-        </p>
-
-        <p class="dialogue">{{currentDialogue}}</p>
-        <p>{{nextDialogue}}</p>
 
     </div>
     <div class="medium-1 column"></div>
