@@ -22,6 +22,31 @@ module.exports = function (app) {
       });
   });
 
+  app.post("/api/users", (req, res) => {
+    console.log(req.body)
+    db.User.create(
+        req.body
+    )
+      .then((newUser) => {
+        res.json(newUser);
+      })
+  });
+
+  app.put("/api/users", function(req, res) {
+    // Update takes in an object describing the properties we want to update, and
+    // we use where to describe which objects we want to update
+    console.log(req.data);
+    db.User.update({
+      age: req.body.age,
+      gender: req.body.gender
+    }, {
+      where: {
+        id: 1
+      }
+    }).then(function(dbUser) {
+      res.json(dbUser);
+    });
+  });
   // app.get("/api/:book", function(req, res) {
   //   Book.findAll({
   //     where: {

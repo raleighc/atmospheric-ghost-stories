@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 $("#name-btn").on("click", function(event) {
     event.preventDefault();
   
@@ -6,21 +8,20 @@ $("#name-btn").on("click", function(event) {
       // name from name input
       fullName: $("#fullName").val().trim(),
     };
-  
+    // console.log(userName);
     // send an AJAX POST-request with jQuery
-    $.post("/api/username", userName)
+    $.post("/api/users", userName)
       // on success, run this callback
-      .then(function(data) {
-        // log the data we found
-        console.log(data);
+      .then(() =>{
+       
+      displayAge();
         
-      }).end();
+      })
     // empty each input box by replacing the value with an empty string
-    // $("#name").val("");
-
-  
+    // $("#name-btn").val("");
   });
-  function displayage(){
+
+  function displayAge(){
     $("#nameForm").hide();
     $("#ageForm").stop().show();
     $("#genderForm").stop().hide();
@@ -30,25 +31,31 @@ $("#name-btn").on("click", function(event) {
     event.preventDefault();
   
     // make a userAge obj
-    var userAge = {
+    var userUpdate = {
       // age from age input
-      age: $("#age").val().trim(),
+      age: $("#age").val(),
+      gender: $("#gender").val(),
     };
-  
+    console.log(userUpdate);
+      $.ajax({
+        method: "PUT",
+        url: "/api/users",
+        data: userUpdate
+      }).then(userUpdate);
+    
     // send an AJAX POST-request with jQuery
-    $.post("/api/userage", userAge)
-      // on success, run this callback
-      .then(function(data) {
-        // log the data we found
-        console.log(data);
-      });
+    // $.post("/api/userage", userAge)
+    //   // on success, run this callback
+    //   .then(function() {
+    //     // log the data we found
+    //   });
   
     // empty each input box by replacing the value with an empty string
-    $("#age").val("");
+    // $("#age").val("");
 
   
   });
-  function displaygender(){
+  function displayGender(){
     $("#nameForm").hide();
     $("#ageForm").stop().hide();
     $("#genderForm").stop().show();
@@ -75,3 +82,4 @@ $("#name-btn").on("click", function(event) {
     $("#name").val("");
   
   });
+})

@@ -32,23 +32,37 @@
 							<input type="text" id="fullName" name="fullName">
 						</div>
 						<div class="nameSubmitBtn">
-							<button onclick="displayage()" class="button secondary" id="name-btn" for="fullName"
-								type="submit" name="fullName">Add
+							<button class="button secondary" id="name-btn" for="fullName" type="submit"
+								name="fullName">Add
 								Name</button>
 						</div>
 					</form>
-					<form id="ageForm" class="create-form" onsubmit="return false" >
+					<form id="ageForm" class="create-form" onsubmit="return false">
 
 						<div class="form-group">
 							<label class="label-text" for="age">What is your age?</label>
-							<input type="text" id="age" name="age">
+							<input type="number" value="21" id="age" name="age">
+						</div>
+						<div class="form-group">
+							<label>What is your gender?
+								<select id="gender">
+									<option value="male">Male</option>
+									<option value="female">Female</option>
+									<option value="other">Other</option>
+								</select>
+							</label>
+							{{!-- <fieldset class="large-5 cell">
+   								<legend>What is your gender?</legend>
+    								<input type="radio" name="gender" value="male" id="gender"><label class="label-text" for="gender">Male</label>
+    								<input type="radio" name="gender" value="female" id="gender"><label class="label-text" for="gender">Female</label>
+  							</fieldset> --}}
 						</div>
 						<div class="ageSubmitBtn">
-							<button onclick="displaygender()" class="button secondary" id="age-btn" for="age" type="submit" name="age">Add
-								Age</button>
+							<button class="button secondary" id="age-btn" for="age" type="submit"
+								name="age">Submit</button>
 						</div>
 					</form>
-					<form id="genderForm" class="create-form" onsubmit="return false">
+					{{!-- <form id="genderForm" class="create-form" onsubmit="return false">
 
 						<div class="form-group">
 							<label class="label-text" for="gender">What is your gender?</label>
@@ -59,7 +73,7 @@
 								name="gender">Add
 								Gender</button>
 						</div>
-					</form>
+					</form> --}}
 					{{!-- <p class="dialogue">{{insert current line of text here}}</p>
 					<p>{{insert next dialogue line here}}</p> --}}
 					<br>
