@@ -62,6 +62,7 @@ body.homePage {
 }
 #ageForm{
   display: none;
+  
 }
 #genderForm{
   display: none;
@@ -74,6 +75,30 @@ body.homePage {
 }
 #foyerRoomChoice{
   display: none;
+}
+#foyerPosRes{
+  display: none;
+}
+#foyerNegRes{
+  display: none;
+}
+#foyerAgeGender{
+  display: none;
+}
+#foyerLastPrompt{
+  display: none;
+}
+#age{
+  align-content: center;
+  justify-content: center;
+  margin-left: 40%;
+  width: 75px;
+}
+#gender{
+  align-content: center;
+  justify-content: center;
+  margin-left: 40%;
+  width: 200px;
 }
 body.startFoyerPage{
   background-color: black;
