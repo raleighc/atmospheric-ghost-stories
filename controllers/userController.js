@@ -4,6 +4,29 @@ const db = require("../models");
 module.exports = function (app) {
   // Views Routes
 
+  // home ghost routes for Ghost name/favsport + User information
+  app.get("/home/:id", (req, res) => {
+    //
+    db.Ghost.findOne({
+      where: { id: req.params.id },
+      raw: true,
+    })
+      .then(function (data) {
+        // first Database call has returned here
+        // console.log(data);
+        // create a temp Ghost object
+        let entryGhost = {
+          fullName: data.fullName,
+          deadFor: data.deadFor,
+        };
+        // res.render("home", data.fullName);
+        res.render("home", {entryGhost});
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
   // room 1 ghost routes for Ghost name/favsport + User information
   app.get("/room1/:id", (req, res) => {
     //
@@ -13,7 +36,7 @@ module.exports = function (app) {
     })
       .then(function (data) {
         // first Database call has returned here
-        console.log(data);
+        // console.log(data);
         // create a temp Ghost object
         let tempGhost = {
           fullName: data.fullName,
@@ -53,7 +76,7 @@ module.exports = function (app) {
     })
       .then(function (data) {
         // first Database call has returned here
-        console.log(data);
+        // console.log(data);
         // create a temp Ghost object
         let tempGhost = {
           fullName: data.fullName,
@@ -65,7 +88,7 @@ module.exports = function (app) {
       })
       .then(function (response) {
         // this should be our tempGhost OBJECT
-        console.log(response);
+        // console.log(response);
         // make our second DB call
         db.User.findAll({}).then(function (user) {
           // did we get the User?

@@ -24,6 +24,7 @@ body.homePage {
   border-color: white;
   background-color: blueviolet;
 }
+
 /* .bgwidth {
   width: auto;
   height: auto;
@@ -63,6 +64,39 @@ body.homePage {
 }
 #genderForm {
   display: none;
+}
+#foyerOption1 {
+  display: none;
+}
+#foyerStayChoice {
+  display: none;
+}
+#foyerRoomChoice {
+  display: none;
+}
+#foyerPosRes {
+  display: none;
+}
+#foyerNegRes {
+  display: none;
+}
+#foyerAgeGender {
+  display: none;
+}
+#foyerLastPrompt {
+  display: none;
+}
+#age {
+  align-content: center;
+  justify-content: center;
+  margin-left: 40%;
+  width: 75px;
+}
+#gender {
+  align-content: center;
+  justify-content: center;
+  margin-left: 40%;
+  width: 200px;
 }
 body.startFoyerPage {
   background-color: black;

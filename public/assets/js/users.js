@@ -1,27 +1,46 @@
 $("#name-btn").on("click", function (event) {
   event.preventDefault();
-
-  // make a userName obj
-  var userName = {
-    // name from name input
-    fullName: $("#fullName").val().trim(),
-  };
-
-  // send an AJAX POST-request with jQuery
-  $.post("/api/username", userName)
-    // on success, run this callback
-    .then(function (data) {
-      // log the data we found
-      console.log(data);
-    })
-    .end();
-  // empty each input box by replacing the value with an empty string
-  // $("#name").val("");
 });
-function displayage() {
+function displaystay() {
   $("#nameForm").hide();
-  $("#ageForm").stop().show();
+  $("#foyerOption1").stop().show();
+  $("#foyerStayChoice").stop().show();
+  $("#foyerPosRes").stop().hide();
+  $("#foyerNegRes").stop().hide();
+  $("#ageForm").stop().hide();
   $("#genderForm").stop().hide();
+  $("#foyerAgeGender").stop().hide();
+}
+function displayPosFoyer() {
+  $("#nameForm").hide();
+  $("#foyerOption1").stop().hide();
+  $("#foyerStayChoice").stop().hide();
+  $("#foyerPosRes").stop().show();
+  $("#foyerNegRes").stop().hide();
+  $("#ageForm").stop().hide();
+  $("#genderForm").stop().hide();
+  $("#foyerAgeGender").stop().hide();
+}
+function displayNegFoyer() {
+  $("#nameForm").hide();
+  $("#foyerOption1").stop().hide();
+  $("#foyerStayChoice").stop().hide();
+  $("#foyerPosRes").stop().hide();
+  $("#foyerNegRes").stop().show();
+  $("#ageForm").stop().hide();
+  $("#genderForm").stop().hide();
+  $("#foyerAgeGender").stop().hide();
+}
+
+function displaygender() {
+  $("#nameForm").hide();
+  $("#foyerOption1").stop().hide();
+  $("#foyerStayChoice").stop().hide();
+  $("#foyerPosRes").stop().hide();
+  $("#foyerNegRes").stop().hide();
+  $("#ageForm").stop().show();
+  $("#genderForm").stop().show();
+  $("#foyerAgeGender").stop().show();
 }
 
 $("#age-btn").on("click", function (event) {
@@ -44,11 +63,6 @@ $("#age-btn").on("click", function (event) {
   // empty each input box by replacing the value with an empty string
   $("#age").val("");
 });
-function displaygender() {
-  $("#nameForm").hide();
-  $("#ageForm").stop().hide();
-  $("#genderForm").stop().show();
-}
 
 $("#gender-btn").on("click", function (event) {
   event.preventDefault();
@@ -70,8 +84,15 @@ $("#gender-btn").on("click", function (event) {
   // empty each input box by replacing the value with an empty string
   $("#name").val("");
 });
-
-$("#init").on("click", function (event) {
-  event.preventDefault();
-  console.log("this clicked");
-});
+function displaylast() {
+  $("#nameForm").hide();
+  $("#foyerOption1").stop().hide();
+  $("#foyerStayChoice").stop().hide();
+  $("#foyerPosRes").stop().hide();
+  $("#foyerNegRes").stop().hide();
+  $("#ageForm").stop().hide();
+  $("#genderForm").stop().hide();
+  $("#foyerAgeGender").stop().hide();
+  $("#foyerRoomChoice").stop().show();
+  $("#foyerLastPrompt").stop().show();
+}
