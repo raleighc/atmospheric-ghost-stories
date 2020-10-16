@@ -1,5 +1,22 @@
 $("#name-btn").on("click", function (event) {
   event.preventDefault();
+
+  // make a userName obj
+  var userName = {
+    // name from name input
+    fullName: $("#fullName").val().trim(),
+  };
+
+  // send an AJAX POST-request with jQuery
+  $.post("/api/username", userName)
+    // on success, run this callback
+    .then(function (data) {
+      // log the data we found
+      console.log(data);
+    })
+    .end();
+  // empty each input box by replacing the value with an empty string
+  // $("#name").val("");
 });
 function displaystay() {
   $("#nameForm").hide();

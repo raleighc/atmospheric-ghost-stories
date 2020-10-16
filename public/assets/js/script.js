@@ -27,14 +27,17 @@ $(document).ready(function () {
   // second response option
   $("#positiveBtn").on("click", function (event) {
     event.preventDefault();
-    $("#interaction1-0").addClass("hide");
-    $("#interaction1-1").removeClass("hide");
+    $("#interaction1-1").addClass("hide");
+    $("#interaction1-2").addClass("hide");
+    $("#interaction1-3").removeClass("hide");
   });
   $("#negativeBtn").on("click", function (event) {
     event.preventDefault();
-    $("#interaction1-0").addClass("hide");
-    $("#interaction1-2").removeClass("hide");
+    $("#interaction1-1").addClass("hide");
+    $("#interaction1-2").addClass("hide");
+    $("#interaction1-4").removeClass("hide");
   });
+  //
 
   // lines 16-25 have to copy/paste a few times. In on click fn, hide previous line of text, show new //
 
