@@ -27,10 +27,10 @@ module.exports = function (app) {
         // make our second DB call
         db.User.findAll({}).then(function (user) {
           // did we get the User?
-          // console.log(user);
+          console.log(user);
           let userObj = {
-            // fullName: user.fullName,
-            fullName: "Toby",
+            fullName: user.fullName,
+            // fullName: "Toby",
             // age: user.age,
             // gender: user.gender
           };
@@ -49,6 +49,8 @@ module.exports = function (app) {
     )
       .then((newUser) => {
         res.json(newUser);
+        // res.render("home", { viewUser: newUser })
+        // console.log(newUser);
       })
   });
 
