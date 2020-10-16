@@ -8,22 +8,28 @@ module.exports = function (app) {
   });
 
   app.get("/home", (req, res) => {
+    // create a random number function
+    // let randoNumObj = {
+    //   num1:"1",
+    //   num2:"2",
+    //   num3:"4"
+    // }
     res.render("home");
   });
 
-  app.get("/ghosts/:id", (req,res) => {
-      res.render("ghosts")
-  })
+  app.get("/ghosts/:id", (req, res) => {
+    res.render("ghosts");
+  });
 
-  app.get("/room1", (req, res) => {
+  app.get("/room1/:id", (req, res) => {
     res.render("room1");
   });
 
-  app.get("rooms/room2", (req, res) => {
+  app.get("rooms/:id", (req, res) => {
     res.render("room2");
   });
 
-  app.get("rooms/room3", (req, res) => {
+  app.get("rooms/:id", (req, res) => {
     res.render("room3");
   });
 };
