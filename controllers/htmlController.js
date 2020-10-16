@@ -7,23 +7,23 @@ module.exports = function (app) {
     res.render("index");
   });
 
-  app.get("/home", (req, res) => {
+  app.get("/home/:id", (req, res) => {
     res.render("home");
   });
 
-  app.get("/ghosts/:id", (req,res) => {
-      res.render("ghosts")
-  })
+  app.get("/ghosts/:id", (req, res) => {
+    res.render("ghosts");
+  });
 
-  app.get("/room1", (req, res) => {
+  app.get("/room1/:id", (req, res) => {
     res.render("room1");
   });
 
-  app.get("rooms/room2", (req, res) => {
+  app.get("rooms/:id", (req, res) => {
     res.render("room2");
   });
 
-  app.get("rooms/room3", (req, res) => {
+  app.get("rooms/:id", (req, res) => {
     res.render("room3");
   });
 };

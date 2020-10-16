@@ -8,7 +8,7 @@
 			<div class="center">
 				<img src="https://ashlynimages.s3.us-east-2.amazonaws.com/FoyerImage.png" id="bg" alt="foyerImg">
 
-				<h1>{{ghost-name}}</h1>
+				<h1>{{entryGhost.fullName}}</h1>
 				<img id="indexGhostSprite"
 					src="https://ashlynimages.s3.us-east-2.amazonaws.com/kisspng-pixel-art-animated-film-ghost-5aff57d1ba3770.4820248215266836017628.png"
 					alt="ghost" />
@@ -27,65 +27,122 @@
 						<div class="form-group">
 							<label class="label-text" for="fullName">AH! Hello. You scared me. I wasn’t expecting you.
 								My name is
-								{{!-- {{Intro Ghost}} --}}
+								{{entryGhost.fullName}}
 								What is your name?</label>
 							<input type="text" id="fullName" name="fullName">
 						</div>
 						<div class="nameSubmitBtn">
-							<button class="button secondary" id="name-btn" for="fullName" type="submit"
-								name="fullName">Add
+							<button class="button secondary" id="name-btn" for="fullName"
+								type="submit" name="fullName">Add
 								Name</button>
 						</div>
 					</form>
-					<form id="ageForm" class="create-form" onsubmit="return false">
+					<div id="foyerOption1" class="ghost-speech" onsubmit="return false">
 
-						<div class="form-group">
-							<label class="label-text" for="age">What is your age?</label>
-							<input type="number" value="21" id="age" name="age">
-						</div>
-						<div class="form-group">
-							<label>What is your gender?
-								<select id="gender">
-									<option value="male">Male</option>
-									<option value="female">Female</option>
-									<option value="other">Other</option>
-								</select>
-							</label>
-							{{!-- <fieldset class="large-5 cell">
-   								<legend>What is your gender?</legend>
-    								<input type="radio" name="gender" value="male" id="gender"><label class="label-text" for="gender">Male</label>
-    								<input type="radio" name="gender" value="female" id="gender"><label class="label-text" for="gender">Female</label>
-  							</fieldset> --}}
-						</div>
-						<div class="ageSubmitBtn">
-							<button class="button secondary" id="age-btn" for="age" type="submit"
-								name="age">Submit</button>
-						</div>
-					</form>
-					{{!-- <form id="genderForm" class="create-form" onsubmit="return false">
+						<div>
+							<label class="label-text" for="fullName">Pleased to meet you {{viewUser.fullName}}
 
-						<div class="form-group">
-							<label class="label-text" for="gender">What is your gender?</label>
-							<input type="text" id="gender" name="gender">
+								No need to be scared, we are only ghosts.
+								<br>
+								Oh the door is locked? How did that happen? Were you trying to leave already?</label>
 						</div>
-						<div class="ageSubmitBtn">
-							<button class="button secondary" id="gender-btn" for="gender" type="submit"
-								name="gender">Add
-								Gender</button>
+
+					</div>
+					<div id="foyerPosRes" class="ghost-speech" onsubmit="return false">
+
+						<div>
+							<label class="label-text">Perfect, I’m glad you enjoy our company. But we
+								know you will eventually tire of us. If you can find favor with the other ghosts in the
+								house they will tell you their story. If you listen and help free them from the house
+								they will present you with the key to your escape. But if they do not appreciate how you
+								treat them, your time with them may be cut short.</label>
 						</div>
-					</form> --}}
+						<div class="posNegBtn">
+							<button class="button secondary" id="posNext-btn" for="age"
+								type="submit" name="age">Next</button>
+						</div>
+
+					</div>
+					<div id="foyerNegRes" class="ghost-speech" onsubmit="return false">
+
+						<div>
+							<label class="label-text"> Well you aren’t going to get out by being so rude.
+								We hold the key to your escape if you can help us escape. If you can find favor with the
+								other ghosts in the house they will tell you their story. If you listen and help free
+								them from the house they will present you with the key to your escape. But if they do
+								not appreciate how you treat them, your time with them may be cut short.</label>
+						</div>
+						<div class="negNextBtn">
+							<button class="button secondary" id="negNext-btn">Next</button>
+						</div>
+
+					</div>
+					<div id="foyerAgeGender" class="ghost-speech" onsubmit="return false">
+
+						<div>
+							<label class="label-text">I’ve lived...or I should say, resided in this house
+								for 170 years now. It is quite pleasant and you will enjoy your time here. Let me know a
+								little more about yourself.</label>
+						</div>
+
+					</div>
+					<div id="foyerLastPrompt" class="ghost-speech" onsubmit="return false">
+
+						<div>
+							<label class="label-text">I feel like I know you better now. The other ghosts
+								don’t like strangers. Here! Take this token so they will know that we are friends. They
+								will start to trust you if they see it. Enjoy your stay!</label>
+						</div>
+
+					</div>
+
+
 					{{!-- <p class="dialogue">{{insert current line of text here}}</p>
 					<p>{{insert next dialogue line here}}</p> --}}
 					<br>
 				</div>
 				<div class="cell small-4 large-4">
-					<p>Which room would you like to enter?</p>
-					<a class="button secondary" href="/room1" id="ghostOne">Room 1</a>
-					<a class="button secondary" href="/room2" id="ghostTwo">Room 2</a>
-					<a class="button secondary" href="/room3" id="ghostThree">Room 3</a>
+					<div id="foyerStayChoice">
+						<div class="nameSubmitBtn">
+							<button class="button secondary" id="foyer-pos-btn"
+								type="submit" name="posFoyer">No, I would never leave so soon.</button>
+						</div>
+						<div class="nameSubmitBtn">
+							<button class="button secondary" id="foyer-neg-btn"
+								type="submit" name="negFoyer">Yes, get me out of here!</button>
+						</div>
+					</div>
+					<form id="ageForm" class="create-form" onsubmit="return false">
 
+						<div class="form-group">
+							<label class="label-text" for="age">What is your age?</label>
+							<input id="age" type="number" min="1" max="100" value="78">
+						</div>
+						<div class="form-group">
+							<label class="label-text" for="gender">What is your gender?</label>
+							<select type="text" id="gender" name="gender">
+								<option value="" disabled selected hidden>Select Gender</option>
+								<option value="Male">Male
+								</option>
+								<option value="Female">Female</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+						<div class="ageSubmitBtn">
+							<button class="button secondary" id="age-btn" for="age"
+								type="submit" name="age">Add
+								Info</button>
+						</div>
+					</form>
+					<div id="foyerRoomChoice">
+						<p>Which room would you like to enter?</p>
+						<a class="button secondary" href="/room1/2" id="ghostOne">Room 1</a>
+						<br>
+						<a class="button secondary" href="/room2/3" id="ghostTwo">Room 2</a>
+						<br>
+						<a class="button secondary" href="/room3/4" id="ghostThree">Room 3</a>
+					</div>
 				</div>
 			</div>
 		</container>
 	</div>
-</body>
