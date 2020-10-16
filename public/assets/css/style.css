@@ -5,13 +5,12 @@ body.homePage {
   background-color: black;
 }
 .bg {
-  justify-content: center;
   position: fixed;
   top: 0;
   z-index: -3;
   background-color: black;
   height: auto;
-  max-height: 700px;
+  max-height: 650px;
 }
 .center {
   display: flex;
@@ -54,52 +53,54 @@ body.homePage {
   bottom: 20%;
   right: 35%;
 }
-.label-text{
+.label-text {
   color: white;
 }
-#nameForm{
+#nameForm {
   display: block;
 }
-#ageForm{
-  display: none;
-  
-}
-#genderForm{
+#ageForm {
   display: none;
 }
-#foyerOption1{
+#genderForm {
   display: none;
 }
-#foyerStayChoice{
+#foyerOption1 {
   display: none;
 }
-#foyerRoomChoice{
+#foyerStayChoice {
   display: none;
 }
-#foyerPosRes{
+#foyerRoomChoice {
   display: none;
 }
-#foyerNegRes{
+#foyerPosRes {
   display: none;
 }
-#foyerAgeGender{
+#foyerNegRes {
   display: none;
 }
-#foyerLastPrompt{
+#foyerAgeGender {
   display: none;
 }
-#age{
+#foyerLastPrompt {
+  display: none;
+}
+#age {
   align-content: center;
   justify-content: center;
   margin-left: 40%;
   width: 75px;
 }
-#gender{
+#gender {
   align-content: center;
   justify-content: center;
   margin-left: 40%;
   width: 200px;
 }
-body.startFoyerPage{
+body.startFoyerPage {
   background-color: black;
+}
+.hide {
+  display: none;
 }
