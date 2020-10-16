@@ -9,6 +9,9 @@ body.homePage {
   top: 0;
   z-index: -3;
   background-color: black;
+  max-height: 700px;
+  height: auto;
+  
   height: auto;
   max-height: 650px;
 }
@@ -41,7 +44,7 @@ body.homePage {
   left: 0;
   bottom: 0;
   width: 100%;
-  min-height: 250px;
+  max-height: 250px;
   background-color: black;
   color: white;
   text-align: center;
