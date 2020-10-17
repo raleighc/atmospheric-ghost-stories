@@ -4,7 +4,7 @@ const db = require("../models");
 module.exports = function (app) {
   // Views Routes
 
-  // home ghost routes for Ghost name/favsport + User information
+  // home ghost routes for Ghost + User information
   app.get("/home/1", (req, res) => {
     //
     db.Ghost.findOne({
@@ -12,9 +12,6 @@ module.exports = function (app) {
       raw: true,
     })
       .then(function (data) {
-        // first Database call has returned here
-        // console.log(data);
-        // create a temp Ghost object
         let tempGhost = {
           fullName: data.fullName,
           deadFor: data.deadFor,
@@ -53,7 +50,7 @@ module.exports = function (app) {
     });
   });
 
-  // room 1 ghost routes for Ghost name/favsport + User information
+  // room 1 ghost routes for Ghost + User information
   app.get("/room1/2", (req, res) => {
     //
     db.Ghost.findOne({
@@ -78,7 +75,7 @@ module.exports = function (app) {
             let nameOfUser = {
               fullName: results.fullName,
             };
-            res.render("room2", { entryGhost: response, viewUser: nameOfUser });
+            res.render("room1", { entryGhost: response, viewUser: nameOfUser });
           })
           .catch((err) => {
             console.log(err);
@@ -86,7 +83,7 @@ module.exports = function (app) {
       });
   });
 
-  //room 2 ghost routes for Ghost name/favsport + User information
+  //room 2 ghost routes for Ghost + User information
   app.get("/room2/3", (req, res) => {
     //=============
     db.Ghost.findOne({
@@ -109,7 +106,7 @@ module.exports = function (app) {
           raw: true,
         })
           .then((results) => {
-            // console.log(results);
+           
             let nameOfUser = {
               fullName: results.fullName,
             };
@@ -130,9 +127,6 @@ module.exports = function (app) {
       raw: true,
     })
       .then(function (data) {
-        // first Database call has returned here
-        // console.log(data);
-        // create a temp Ghost object
         let tempGhost = {
           fullName: data.fullName,
           deadFor: data.deadFor,
@@ -142,15 +136,11 @@ module.exports = function (app) {
         return tempGhost;
       })
       .then(function (response) {
-        // res.render("room2", { entryGhost: response });
-
-        //==========
         db.User.findOne({
           where: { id: 1 },
           raw: true,
         })
           .then((results) => {
-            // console.log(results);
             let nameOfUser = {
               fullName: results.fullName,
             };
@@ -161,18 +151,6 @@ module.exports = function (app) {
           .catch((err) => {
             console.log(err);
           });
-        // res.render("room2", { entryGhost: response , viewUser: nameOfUser });
       });
   });
-
-  // // API Routes
-  // router.post("api/user", (req, res) => {
-  //   db.User.create(req.body)
-  //     .then((newUser) => {
-  //       res.json(newUser);
-  //     })
-  //     .catch(() => {
-  //       console.log();
-  //     });
-  // });
 };
