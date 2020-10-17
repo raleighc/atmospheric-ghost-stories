@@ -11,14 +11,22 @@ body {
   background-color: black;
   max-height: 700px;
   height: auto;
-  max-height: 650px;
 }
+
 .bg2 {
   position: fixed;
   top: 0;
   z-index: -3;
   background-color: black;
-  min-height: 800px;
+  max-height: 700px;
+  height: auto;
+}
+.bg3 {
+  position: fixed;
+  bottom: 245px;
+  z-index: -3;
+  background-color: black;
+  min-height: 700px;
   height: auto;
 }
 .center {
@@ -69,6 +77,27 @@ body {
   position: absolute;
   bottom: 30%;
   right: 28%;
+}
+#room1GhostSprite {
+  height: 300px;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 30%;
+  right: 35%;
+}
+#room2GhostSprite {
+  height: 300px;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 35%;
+  right: 50%;
+}
+#room3GhostSprite {
+  height: 300px;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 30%;
+  right: 60%;
 }
 .label-text {
   color: white;
