@@ -22,14 +22,14 @@
 			<div class="cell medium-auto medium-cell-block-container">
 				<div class="grid-x grid-padding-x">
 					<div class="cell small-3 large-3"></div>
-					<div class="cell medium-2 medium-cell-block-y">
+					<div class="cell medium-3 medium-cell-block-y">
 						<form id="nameForm" class="create-form" onsubmit="return false">
 
 							<div class="form-group">
-								<label class="label-text" for="fullName">AH! Hello. You scared me. I wasn’t
-									expecting you.
-									My name is
-									{{entryGhost.fullName}}
+								<label class="label-text" for="fullName">AH! Hello. You scared me. I wasn’t expecting you.
+								<br> 	
+								My name is {{entryGhost.fullName}}.
+								<br>
 									What is your name?</label>
 								<input type="text" id="fullName" name="fullName">
 							</div>
@@ -44,10 +44,12 @@
 							<div>
 								<label class="label-text" for="fullName">Pleased to meet you <span
 										class="characterName"></span>.
-
+									<br>
 									No need to be scared, we are only ghosts.
 									<br>
-									Oh the door is locked? How did that happen? Were you trying to leave
+									Oh the door is locked? How did that happen? 
+									<br>
+									Were you trying to leave
 									already?</label>
 							</div>
 
@@ -68,6 +70,7 @@
 								<button class="button secondary" id="posNext-btn" for="age" type="submit"
 									name="age">Next</button>
 							</div>
+
 						</div>
 						<div id="foyerNegRes" class="ghost-speech" onsubmit="return false">
 
@@ -108,8 +111,7 @@
 						</div>
 						<br>
 					</div>
-
-					<div class="cell medium-2 medium-cell-block-y">
+					<div class="center cell medium-3 medium-cell-block-y">
 						<div id="foyerStayChoice">
 							<div class="nameSubmitBtn">
 								<button class="button secondary" id="foyer-pos-btn" type="submit" name="posFoyer">No, I
@@ -143,9 +145,11 @@
 						</form>
 
 						<div id="foyerRoomChoice">
-							<p id="foyerRoomText">Which room would you like to enter?</p>
+							<p>Which room would you like to enter?</p>
 							<a class="button secondary" href="/room1/2" id="ghostOne">Room 1</a>
+							
 							<a class="button secondary" href="/room2/3" id="ghostTwo">Room 2</a>
+							
 							<a class="button secondary" href="/room3/4" id="ghostThree">Room 3</a>
 						</div>
 					</div>
