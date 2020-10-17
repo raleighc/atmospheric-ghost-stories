@@ -4,17 +4,14 @@ const db = require("../models");
 module.exports = function (app) {
   // Views Routes
 
-  // home ghost routes for Ghost name/favsport + User information
-  app.get("/home/:id", (req, res) => {
+  // home ghost routes for Ghost + User information
+  app.get("/home/1", (req, res) => {
     //
     db.Ghost.findOne({
-      where: { id: req.params.id },
+      where: { id:1 },
       raw: true,
     })
       .then(function (data) {
-        // first Database call has returned here
-        // console.log(data);
-        // create a temp Ghost object
         let tempGhost = {
           fullName: data.fullName,
           deadFor: data.deadFor,
@@ -22,20 +19,7 @@ module.exports = function (app) {
         return tempGhost;
       })
       .then(function (response) {
-        // this should be our tempGhost OBJECT
-        // console.log(response);
-        // make our second DB call
-        db.User.findAll({}).then(function (user) {
-          // did we get the User?
-          console.log(user);
-          let userObj = {
-            fullName: user.fullName,
-            // fullName: "Toby",
-            // age: user.age,
-            // gender: user.gender
-          };
-          res.render("home", { entryGhost: response, viewUser: userObj });
-        });
+        res.render("home", { entryGhost: response });
       })
       .catch((err) => {
         console.log(err);
@@ -43,52 +27,37 @@ module.exports = function (app) {
   });
 
   app.post("/api/users", (req, res) => {
-    console.log(req.body)
-    db.User.create(
-        req.body
-    )
-      .then((newUser) => {
-        res.json(newUser);
-        // res.render("home", { viewUser: newUser })
-        // console.log(newUser);
-      })
+    console.log(req.body);
+    db.User.create(req.body).then((newUser) => {
+      res.json(newUser);
+    });
   });
 
-  app.put("/api/users", function(req, res) {
-    // Update takes in an object describing the properties we want to update, and
-    // we use where to describe which objects we want to update
+  app.put("/api/users", function (req, res) {
     console.log(req.data);
-    db.User.update({
-      age: req.body.age,
-      gender: req.body.gender
-    }, {
-      where: {
-        id: 1
+    db.User.update(
+      {
+        age: req.body.age,
+        gender: req.body.gender,
+      },
+      {
+        where: {
+          id: 1,
+        },
       }
-    }).then(function(dbUser) {
+    ).then(function (dbUser) {
       res.json(dbUser);
     });
   });
-  // app.get("/api/:book", function(req, res) {
-  //   Book.findAll({
-  //     where: {
-  //       title: req.params.book
-  //     }
-  //   }).then(function(results) {
-  //     res.json(results);
-  //   });
-  // });
-  // room 1 ghost routes for Ghost name/favsport + User information
-  app.get("/room1/:id", (req, res) => {
+
+  // room 1 ghost routes for Ghost + User information
+  app.get("/room1/2", (req, res) => {
     //
     db.Ghost.findOne({
-      where: { id: req.params.id },
+      where: { id: 2 },
       raw: true,
     })
       .then(function (data) {
-        // first Database call has returned here
-        // console.log(data);
-        // create a temp Ghost object
         let tempGhost = {
           fullName: data.fullName,
           deadFor: data.deadFor,
@@ -98,37 +67,30 @@ module.exports = function (app) {
         return tempGhost;
       })
       .then(function (response) {
-        // this should be our tempGhost OBJECT
-        // console.log(response);
-        // make our second DB call
-        db.User.findAll({}).then(function (user) {
-          // did we get the User?
-          // console.log(user);
-          let userObj = {
-            // fullName: user.fullName,
-            fullName: "Bobby",
-            // age: user.age,
-            // gender: user.gender
-          };
-          res.render("room1", { viewGhost: response, viewUser: userObj });
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+        db.User.findOne({
+          where: { id: 1 },
+          raw: true,
+        })
+          .then((results) => {
+            let nameOfUser = {
+              fullName: results.fullName,
+            };
+            res.render("room1", { entryGhost: response, viewUser: nameOfUser });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       });
   });
 
-  //room 2 ghost routes for Ghost name/favsport + User information
-  app.get("/room2/:id", (req, res) => {
-    //
+  //room 2 ghost routes for Ghost + User information
+  app.get("/room2/3", (req, res) => {
+    //=============
     db.Ghost.findOne({
-      where: { id: req.params.id },
+      where: { id: 3 },
       raw: true,
     })
       .then(function (data) {
-        // first Database call has returned here
-        // console.log(data);
-        // create a temp Ghost object
         let tempGhost = {
           fullName: data.fullName,
           deadFor: data.deadFor,
@@ -138,37 +100,33 @@ module.exports = function (app) {
         return tempGhost;
       })
       .then(function (response) {
-        // this should be our tempGhost OBJECT
-        // console.log(response);
-        // make our second DB call
-        db.User.findAll({}).then(function (user) {
-          // did we get the User?
-          // console.log(user);
-          let userObj = {
-            fullName: "Tommy",
-            // fullName: user.fullName,
-            // age: user.age,
-            // gender: user.gender
-          };
-          res.render("room2", { viewGhost: response, viewUser: userObj });
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+        //==========
+        db.User.findOne({
+          where: { id: 1 },
+          raw: true,
+        })
+          .then((results) => {
+           
+            let nameOfUser = {
+              fullName: results.fullName,
+            };
+            res.render("room2", { entryGhost: response, viewUser: nameOfUser });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       });
   });
+
 
   //room 3 ghost routes for Ghost name/favsport + User information
-  app.get("/room3/:id", (req, res) => {
+  app.get("/room3/4", (req, res) => {
     //
     db.Ghost.findOne({
-      where: { id: req.params.id },
+      where: { id: 4 },
       raw: true,
     })
       .then(function (data) {
-        // first Database call has returned here
-        // console.log(data);
-        // create a temp Ghost object
         let tempGhost = {
           fullName: data.fullName,
           deadFor: data.deadFor,
@@ -178,36 +136,21 @@ module.exports = function (app) {
         return tempGhost;
       })
       .then(function (response) {
-        // this should be our tempGhost OBJECT
-        // console.log(response);
-        // make our second DB call
-        db.User.findAll({}).then(function (user) {
-          // did we get the User?
-          // console.log(user);
-          let userObj = {
-            fullName: "Sarah",
-            // fullName: user.fullName,
-            // age: user.age,
-            // gender: user.gender
-          };
-          res.render("room3", { viewGhost: response, viewUser: userObj });
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+        db.User.findOne({
+          where: { id: 1 },
+          raw: true,
+        })
+          .then((results) => {
+            let nameOfUser = {
+              fullName: results.fullName,
+            };
+            // console.log(nameOfUser)
+            
+            res.render("room3", { entryGhost: response, viewUser: nameOfUser });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       });
   });
-
-
-
-  // // API Routes
-  // router.post("api/user", (req, res) => {
-  //   db.User.create(req.body)
-  //     .then((newUser) => {
-  //       res.json(newUser);
-  //     })
-  //     .catch(() => {
-  //       console.log();
-  //     });
-  // });
 };
