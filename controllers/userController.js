@@ -22,20 +22,7 @@ module.exports = function (app) {
         return tempGhost;
       })
       .then(function (response) {
-        // this should be our tempGhost OBJECT
-        // console.log(response);
-        // make our second DB call
-        db.User.findAll({}).then(function (user) {
-          // did we get the User?
-          console.log(user);
-          let userObj = {
-            fullName: user.fullName,
-            // fullName: "Toby",
-            // age: user.age,
-            // gender: user.gender
-          };
-          res.render("home", { entryGhost: response, viewUser: userObj });
-        });
+        res.render("home", { entryGhost: response });
       })
       .catch((err) => {
         console.log(err);
@@ -43,29 +30,29 @@ module.exports = function (app) {
   });
 
   app.post("/api/users", (req, res) => {
-    console.log(req.body)
-    db.User.create(
-        req.body
-    )
-      .then((newUser) => {
-        res.json(newUser);
-        // res.render("home", { viewUser: newUser })
-        // console.log(newUser);
-      })
+    console.log(req.body);
+    db.User.create(req.body).then((newUser) => {
+      res.json(newUser);
+      // res.render("home", { viewUser: newUser })
+      // console.log(newUser);
+    });
   });
 
-  app.put("/api/users", function(req, res) {
+  app.put("/api/users", function (req, res) {
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
     console.log(req.data);
-    db.User.update({
-      age: req.body.age,
-      gender: req.body.gender
-    }, {
-      where: {
-        id: 1
+    db.User.update(
+      {
+        age: req.body.age,
+        gender: req.body.gender,
+      },
+      {
+        where: {
+          id: 1,
+        },
       }
-    }).then(function(dbUser) {
+    ).then(function (dbUser) {
       res.json(dbUser);
     });
   });
@@ -197,8 +184,6 @@ module.exports = function (app) {
         console.log(err);
       });
   });
-
-
 
   // // API Routes
   // router.post("api/user", (req, res) => {
