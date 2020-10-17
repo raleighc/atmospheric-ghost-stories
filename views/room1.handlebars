@@ -1,228 +1,254 @@
 <h1>{{ghost-name}}</h1>
-<div class="row">
-    <div class="medium-2 column"></div>
-    <div class="center medium-8 column">
+	<div class="grid-x">
+		<div class="cell">
+			<div class="center">
         <img id="bg2" class="backgroundImg"
             src="https://images.8tracks.com/cover/i/012/335/362/2141676ec3dfc6c1272f09d02aac107f-1267.jpg?rect=0,259,563,563&q=98&fm=jpg&fit=max"
             alt="backgroundImage" />
-    </div>
-    <div class="medium-2 column"></div>
-</div>
+			</div>
+		</div>
+	</div>
 {{!-- <img src="#" id="ghostSprite" alt="ghost_sprite" /> --}}
-<div class="row">
-    <div class="medium-1 column"></div>
-    <div class="medium-5 column">
-        <button type="button" class="button secondary show" id="gogoGhostie">Go go ghostie</button>
+<div class="footer">
+    <hr>
+    <div class="grid-y medium-grid-frame">
+        <div class="cell medium-auto medium-cell-block-container">
+            <div class="grid-x grid-padding-x">
+                <div class="cell small-1 large-3 "></div>
+                <div class="cell medium-6 medium-cell-block-y">
+                <button type="button" class="button secondary show" id="gogoGhostie">Go go ghostie</button>
 
 
-        {{!-- initial greeting from Ghost 1 --}}
-        <form id="interaction1-0" class="create-form hide">
+                {{!-- initial greeting from Ghost 1 --}}
+                <form id="interaction1-0" class="create-form hide">
 
-            <div class="form-group">
+                    <div class="form-group">
 
-                <p> `Hello, USERNAME. I’m sorry to bother you, but you looked lost. I
-                    didn’t
-                    mean to scare you.
-                    I just wanted to make sure you were alright. You seem...distracted. You just walked in here with a
-                    dazed look. Do you need
-                    anything?
-                </p>
+                        <p> `Hello, USERNAME. I’m sorry to bother you, but you looked lost. I
+                            didn’t
+                            mean to scare you.
+                            I just wanted to make sure you were alright. You seem...distracted. You just walked in here
+                            with a
+                            dazed look. Do you need
+                            anything?
+                        </p>
+
+                    </div>
+                    {{!-- pos show 1.1 --}}
+                    <div id="positiveBtn">
+                        <button class="button secondary" id="posBtn1" for="positive" type="submit" name="posBtn">I’m
+                            okay,
+                            thanks. Who are you?
+                        </button>
+                    </div>
+                    {{!-- neg show 1.2 --}}
+                    <div id="negativeBtn">
+                        <button class="button secondary" id="negBtn1" for="negative" type="submit" name="negBtn">Ahhhh!
+                            It’s a
+                            g-g-g-g-ghost! Get away!
+                        </button>
+                    </div>
+                    <a href="/">
+                        <button class="run">RUN!</button>
+                    </a>
+                </form>
+                {{!-- if positive first user response show 1.1 --}}
+                <form id="interaction1-1" class="create-form hide">
+
+                    <div class="form-group">
+
+                        <p>
+                            My name is GERTRUDE, and this is my home. Welcome. I’m sorry for the mess, there’s only
+                            so
+                            much I can do around here these days. It’s been so long since I’ve had new company.`
+                        </p>
+
+                    </div>
+                    {{!-- pos show 1.3 --}}
+                    <div id="positiveBtn2">
+                        <button class="button secondary" id="posBtn2" for="positive" type="submit" name="posBtn">Tell me
+                            about
+                            yourself
+                        </button>
+                    </div>
+                    {{!-- pos show 1.4 --}}
+                    <div id="negativeBtn2">
+                        <button class="button secondary" id="negBtn2" for="negative" type="submit" name="negBtn">Why
+                            would
+                            anyone want to come here?
+                        </button>
+                    </div>
+                    <a href="/">
+                        <button class="run">RUN!</button>
+                    </a>
+                </form>
+                {{!-- if negative first user response show 1.2--}}
+                <form id="interaction1-2" class="create-form hide">
+
+                    <div class="form-group">
+
+                        <p>
+                            Oh, calm down. My name is GERTRUDE and this is my home. Normally I would welcome visitors,
+                            please
+                            be kind and don’t make me change my mind.
+                        </p>
+
+                    </div>
+                    {{!-- pos show 1.5 --}}
+                    <div id="positiveBtn3">
+                        <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Tell me
+                            about
+                            yourself
+                        </button>
+                    </div>
+                    {{!-- neg show 1.6 --}}
+                    <div id="negativeBtn3">
+                        <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Why
+                            would
+                            anyone want to come here?
+                        </button>
+                    </div>
+                    <a href="/">
+                        <button class="run">RUN!</button>
+                    </a>
+                </form>
+                {{!-- if positive second user response show 1.3 --}}
+                <form id="interaction1-3" class="create-form hide">
+
+                    <div class="form-group">
+
+                        <p>
+                            I was born in ST. LOUIS but I spent most of my life in this house. My husband, CHARLIE, and
+                            I
+                            loved this home. We raised our family here. My children took their first steps right over
+                            there by
+                            the
+                            fireplace. I somehow got stuck here forever. You will probably meet other spirits around
+                            here
+                            somewhere, so
+                            make
+                            sure to stay on their good side, or you won’t get the key so you can leave. Can you help?
+                        </p>
+
+                    </div>
+                    {{!-- pos show 1.7 --}}
+                    <div id="positiveBtn4">
+                        <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Who are
+                            the
+                            other spirits? How can I help?
+                        </button>
+                    </div>
+                    {{!-- neg show 1.8 --}}
+                    <div id="negativeBtn4">
+                        <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Why
+                            would I
+                            help you?
+                        </button>
+                    </div>
+                    <a href="/">
+                        <button class="run">RUN!</button>
+                    </a>
+                </form>
+                {{!-- if negative second user response show 1.4--}}
+                <form id="interaction1-4" class="create-form hide">
+
+                    <div class="form-group">
+
+                        <p>
+                            This is my home. Do not speak of it like that. I worked my whole life for this house. Are
+                            you going
+                            to
+                            help us or not?
+                        </p>
+
+                    </div>
+                    {{!-- pos show 1.7 --}}
+                    <div id="positiveBtn5">
+                        <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Who are
+                            the
+                            other spirits? How can I help?
+                        </button>
+                    </div>
+                    {{!-- neg show 1.8 --}}
+                    <div id="negativeBtn5">
+                        <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Why
+                            would I
+                            help you?
+                        </button>
+                    </div>
+                    <a href="/">
+                        <button class="run">RUN!</button>
+                    </a>
+                </form>
+                <form id="interaction1-5" class="create-form hide">
+
+                    <div class="form-group">
+
+                        <p>
+                            They are other spirits like myself, who were trapped here throughout time, but we want to
+                            leave
+                            now. When I died in a BMX accident, I just couldn’t let myself leave here. And now I’m
+                            stuck. Just
+                            give
+                            the
+                            others one of these keys and get on their good side to convince them to leave the house for
+                            good. If
+                            you
+                            help
+                            me, I can leave.`
+                        </p>
+
+                    </div>
+                    {{!-- pos show 1.7 --}}
+                    <div id="positiveBtn6">
+                        <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">I want
+                            to help.
+                        </button>
+                    </div>
+                    {{!-- neg show 1.8 --}}
+                    <div id="negativeBtn6">
+                        <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">I don't
+                            want to
+                            help.
+                        </button>
+                    </div>
+                    <a href="/">
+                        <button class="run">RUN!</button>
+                    </a>
+                </form>
+                <form id="interaction1-6" class="create-form hide">
+
+                    <div class="form-group">
+
+                        <p>
+                            GET OUT
+                        </p>
+
+                    </div>
+                    {{!-- pos show 1.7 --}}
+                    <div id="positiveBtn7">
+                        <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">OK
+                        </button>
+                    </div>
+                    {{!-- neg show 1.8 --}}
+                    <div id="negativeBtn7">
+                        <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">BAHHHHH
+                        </button>
+                    </div>
+                    <a href="/">
+                        <button class="run">RUN!</button>
+                    </a>
+                </form>
+
+
 
             </div>
-            {{!-- pos show 1.1 --}}
-            <div id="positiveBtn">
-                <button class="button secondary" id="posBtn1" for="positive" type="submit" name="posBtn">I’m okay,
-                    thanks. Who are you?
-                </button>
-            </div>
-            {{!-- neg show 1.2 --}}
-            <div id="negativeBtn">
-                <button class="button secondary" id="negBtn1" for="negative" type="submit" name="negBtn">Ahhhh! It’s a
-                    g-g-g-g-ghost! Get away!
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        {{!-- if positive first user response show 1.1 --}}
-        <form id="interaction1-1" class="create-form hide">
+            <div class="medium-5 column">
 
-            <div class="form-group">
-
-                <p>
-                    My name is GERTRUDE, and this is my home. Welcome. I’m sorry for the mess, there’s only
-                    so
-                    much I can do around here these days. It’s been so long since I’ve had new company.`
-                </p>
 
             </div>
-            {{!-- pos show 1.3 --}}
-            <div id="positiveBtn2">
-                <button class="button secondary" id="posBtn2" for="positive" type="submit" name="posBtn">Tell me about
-                    yourself
-                </button>
-            </div>
-            {{!-- pos show 1.4 --}}
-            <div id="negativeBtn2">
-                <button class="button secondary" id="negBtn2" for="negative" type="submit" name="negBtn">Why would
-                    anyone want to come here?
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        {{!-- if negative first user response show 1.2--}}
-        <form id="interaction1-2" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    Oh, calm down. My name is GERTRUDE and this is my home. Normally I would welcome visitors, please
-                    be kind and don’t make me change my mind.
-                </p>
-
-            </div>
-            {{!-- pos show 1.5 --}}
-            <div id="positiveBtn3">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Tell me about
-                    yourself
-                </button>
-            </div>
-            {{!-- neg show 1.6 --}}
-            <div id="negativeBtn3">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Why would
-                    anyone want to come here?
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        {{!-- if positive second user response show 1.3 --}}
-        <form id="interaction1-3" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    I was born in ST. LOUIS but I spent most of my life in this house. My husband, CHARLIE, and
-                    I
-                    loved this home. We raised our family here. My children took their first steps right over there by
-                    the
-                    fireplace. I somehow got stuck here forever. You will probably meet other spirits around here
-                    somewhere, so
-                    make
-                    sure to stay on their good side, or you won’t get the key so you can leave. Can you help?
-                </p>
-
-            </div>
-            {{!-- pos show 1.7 --}}
-            <div id="positiveBtn4">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Who are the
-                    other spirits? How can I help?
-                </button>
-            </div>
-            {{!-- neg show 1.8 --}}
-            <div id="negativeBtn4">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Why would I
-                    help you?
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        {{!-- if negative second user response show 1.4--}}
-        <form id="interaction1-4" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    This is my home. Do not speak of it like that. I worked my whole life for this house. Are you going
-                    to
-                    help us or not?
-                </p>
-
-            </div>
-            {{!-- pos show 1.7 --}}
-            <div id="positiveBtn5">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Who are the
-                    other spirits? How can I help?
-                </button>
-            </div>
-            {{!-- neg show 1.8 --}}
-            <div id="negativeBtn5">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Why would I
-                    help you?
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        <form id="interaction1-5" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    They are other spirits like myself, who were trapped here throughout time, but we want to
-                    leave
-                    now. When I died in a BMX accident, I just couldn’t let myself leave here. And now I’m stuck. Just
-                    give
-                    the
-                    others one of these keys and get on their good side to convince them to leave the house for good. If
-                    you
-                    help
-                    me, I can leave.`
-                </p>
-
-            </div>
-            {{!-- pos show 1.7 --}}
-            <div id="positiveBtn6">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">I want to help.
-                </button>
-            </div>
-            {{!-- neg show 1.8 --}}
-            <div id="negativeBtn6">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">I don't want to
-                    help.
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        <form id="interaction1-6" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    GET OUT
-                </p>
-
-            </div>
-            {{!-- pos show 1.7 --}}
-            <div id="positiveBtn7">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">OK
-                </button>
-            </div>
-            {{!-- neg show 1.8 --}}
-            <div id="negativeBtn7">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">BAHHHHH
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-
-
-
+            <div class="medium-1 column"></div>
+        </div>
     </div>
-    <div class="medium-5 column">
-
-
-    </div>
-    <div class="medium-1 column"></div>
+</div>
 </div>
