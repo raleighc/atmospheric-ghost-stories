@@ -24,7 +24,7 @@ module.exports = function (sequelize, DataTypes) {
     //   type: DataTypes.INTEGER,
     // },
   });
-  Ghost.associate = function (models) {
+  Ghost.associate = (models) => {
     Ghost.hasMany(models.Story, {
       onDelete: "cascade",
     });
