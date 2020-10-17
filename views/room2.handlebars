@@ -1,13 +1,13 @@
 <h1>{{ghost-name}}</h1>
-	<div class="grid-x">
-		<div class="cell">
-			<div class="center">
-        <img id="bg" class="backgroundImg"
-            src="https://images.8tracks.com/cover/i/012/335/362/2141676ec3dfc6c1272f09d02aac107f-1267.jpg?rect=0,259,563,563&q=98&fm=jpg&fit=max"
-            alt="backgroundImage" />
-			</div>
-		</div>
-	</div>
+<div class="grid-x">
+    <div class="cell">
+        <div class="center">
+            <img id="bg" class="backgroundImg"
+                src="https://images.8tracks.com/cover/i/012/335/362/2141676ec3dfc6c1272f09d02aac107f-1267.jpg?rect=0,259,563,563&q=98&fm=jpg&fit=max"
+                alt="backgroundImage" />
+        </div>
+    </div>
+</div>
 {{!-- <img src="#" id="ghostSprite" alt="ghost_sprite" /> --}}
 <div class="footer">
     <hr>
@@ -16,216 +16,214 @@
             <div class="grid-x grid-padding-x">
                 <div class="cell small-1 large-3 "></div>
                 <div class="cell medium-6 medium-cell-block-y">
-        <button type="button" class="button secondary show" id="gogoGhostie">Go go ghostie</button>
+                    <button type="button" class="button secondary show" id="gogoGhostie">Go go ghostie</button>
 
 
-        {{!-- initial greeting from Ghost 1 --}}
-        <form id="interaction1-0" class="create-form hide">
+                    {{!-- initial greeting from Ghost 1 --}}
+                    <form id="interaction1-0" class="create-form hide">
 
-            <div class="form-group">
+                        <div class="form-group">
 
-                <p> HELLO, MORTAL
-                </p>
+                            <p> HELLO, MORTAL
+                            </p>
 
+                        </div>
+                        {{!-- pos show 1.1 --}}
+                        <div id="positiveBtn">
+                            <button class="button secondary" id="posBtn1" for="positive" type="submit"
+                                name="posBtn">Ahhh! Hello?
+                                Who are you?
+                            </button>
+                        </div>
+                        {{!-- neg show 1.2 --}}
+                        <div id="negativeBtn">
+                            <button class="button secondary" id="negBtn1" for="negative" type="submit" name="negBtn">Oh
+                                my gosh what
+                                the heck? Why do you have to be so mean??
+                            </button>
+                        </div>
+                    </form>
+                    {{!-- if positive first user response show 1.1 --}}
+                    <form id="interaction1-1" class="create-form hide">
+
+                        <div class="form-group">
+
+                            <p>
+                                `Hahaha. I'm just messing with you. I get bored sometimes and we don't see many
+                                newcomers 'round
+                                here. My name is {{ghost-name2}}, and I travelled this whole country looking for ore
+                                before the
+                                railroads were
+                                even built.`
+                            </p>
+
+                        </div>
+                        {{!-- pos show 1.3 --}}
+                        <div id="positiveBtn2">
+                            <button class="button secondary" id="posBtn2" for="positive" type="submit" name="posBtn">Uh,
+                                ok. Why do
+                                you smell so bad?
+                            </button>
+                        </div>
+                        {{!-- pos show 1.4 --}}
+                        <div id="negativeBtn2">
+                            <button class="button secondary" id="negBtn2" for="negative" type="submit" name="negBtn">Oh,
+                                cool, did
+                                you mine gold?
+                            </button>
+                        </div>
+                    </form>
+                    {{!-- if negative first user response show 1.2--}}
+                    <form id="interaction1-2" class="create-form hide">
+
+                        <div class="form-group">
+
+                            <p>
+                                `Hah. Get yourself together. Why are you so scared of everything? I travelled this whole
+                                land
+                                barefoot,
+                                and I remember everyone being scared of Ol' {{ghost-name2}}, not the other way around!`
+                            </p>
+
+                        </div>
+                        {{!-- pos show 1.5 --}}
+                        <div id="positiveBtn3">
+                            <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Uh,
+                                ok. Why do
+                                you smell so bad?
+                            </button>
+                        </div>
+                        {{!-- neg show 1.6 --}}
+                        <div id="negativeBtn3">
+                            <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Oh,
+                                cool, did
+                                you mine gold?
+                            </button>
+                        </div>
+                    </form>
+                    {{!-- if positive second user response show 1.3 --}}
+                    <form id="interaction1-3" class="create-form hide">
+
+                        <div class="form-group">
+
+                            <p>
+                                `AHAHAHA I spent 18 hours a day digging through the dirt and you ask why I smell bad? Of
+                                course
+                                I do! I came from {{city-name2}}, but I dug hard and I even owned my own mine for
+                                awhile. The people
+                                around here
+                                called it Ol' {{ghost-name2}}'s Mud Pit. I think we might be on top of it now. This
+                                house was never
+                                here for me
+                                to see it before I just kind of...showed up.
+                            </p>
+
+                        </div>
+                        {{!-- pos show 1.7 --}}
+                        <div id="positiveBtn4">
+                            <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Are
+                                you trapped
+                                here? I think I can help.
+                            </button>
+                        </div>
+                        {{!-- neg show 1.8 --}}
+                        <div id="negativeBtn4">
+                            <button class="button secondary" id="negBtn3" for="negative" type="submit"
+                                name="negBtn">Have fun
+                                sitting here doing nothing.
+                            </button>
+                        </div>
+                    </form>
+                    {{!-- if negative second user response show 1.4--}}
+                    <form id="interaction1-4" class="create-form hide">
+
+                        <div class="form-group">
+
+                            <p>
+                                `Of course I did! What else would I have dug for? I left {{city-name2}} to dig for stuff
+                                when I was
+                                {{age2}} years old. Years later, there was an accident, I think, and all of the sudden
+                                I'm stuck
+                                here in this
+                                fancy house.`
+                            </p>
+
+                        </div>
+                        {{!-- pos show 1.7 --}}
+                        <div id="positiveBtn5">
+                            <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Are
+                                you trapped
+                                here? I think I can help.
+                            </button>
+                        </div>
+                        {{!-- neg show 1.8 --}}
+                        <div id="negativeBtn5">
+                            <button class="button secondary" id="negBtn3" for="negative" type="submit"
+                                name="negBtn">Have fun
+                                sitting here doing nothing.
+                            </button>
+                        </div>
+                    </form>
+                    <form id="interaction1-5" class="create-form hide">
+
+                        <div class="form-group">
+
+                            <p>
+                                Will you help me, friend? I think I'm trapped, and as much I think {{ghost-name1}} is a
+                                nice
+                                lady, this house isn't my own and I need to keep searching for gold.
+                            </p>
+
+                        </div>
+                        {{!-- pos show 1.7 --}}
+                        <div id="positiveBtn6">
+                            <a class="button secondary" id="posBtn3" for="positive" type="submit"
+                                name="posBtn" href="/foyer/1">Yes, I'll help.
+                                I want to see you with all the gold in the ground.
+                            </a>
+                        </div>
+                        {{!-- neg show 1.8 --}}
+                        <div id="negativeBtn6">
+                            <a class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn" href="/foyer/1">No,
+                                thanks, I'm
+                                good.
+                            </a>
+                        </div>
+                    </form>
+                    <form id="interaction1-6" class="create-form hide">
+
+                        <div class="form-group">
+
+                            <p>
+                                `I'll mine your head for gold, {{user-name}}!!!`
+                            </p>
+
+                        </div>
+                        {{!-- pos show 1.7 --}}
+                        <div id="positiveBtn7">
+                            <a class="button secondary" id="posBtn3" for="positive" type="submit"
+                                name="posBtn" href="/foyer/1">Hey, I'm
+                                leaving. No need to get violent.
+                            </a>
+                        </div>
+                        {{!-- neg show 1.8 --}}
+                        <div id="negativeBtn7">
+                            <a class="button secondary" id="negBtn3" for="negative" type="submit"
+                                name="negBtn" href="/foyer/1">AHHH, NO!
+                            </a>
+                        </div>
+                    </form>
+
+                    <a class="button secondary run" id="runBtn" href="/foyer/1">RUN!</a>
+
+
+                </div>
+                <div class="medium-5 column">
+
+
+                </div>
+                <div class="medium-1 column"></div>
             </div>
-            {{!-- pos show 1.1 --}}
-            <div id="positiveBtn">
-                <button class="button secondary" id="posBtn1" for="positive" type="submit" name="posBtn">Ahhh! Hello?
-                    Who are you?
-                </button>
-            </div>
-            {{!-- neg show 1.2 --}}
-            <div id="negativeBtn">
-                <button class="button secondary" id="negBtn1" for="negative" type="submit" name="negBtn">Oh my gosh what
-                    the heck? Why do you have to be so mean??
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        {{!-- if positive first user response show 1.1 --}}
-        <form id="interaction1-1" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    `Hahaha. I'm just messing with you. I get bored sometimes and we don't see many newcomers 'round
-                    here. My name is {{ghost-name2}}, and I travelled this whole country looking for ore before the
-                    railroads were
-                    even built.`
-                </p>
-
-            </div>
-            {{!-- pos show 1.3 --}}
-            <div id="positiveBtn2">
-                <button class="button secondary" id="posBtn2" for="positive" type="submit" name="posBtn">Uh, ok. Why do
-                    you smell so bad?
-                </button>
-            </div>
-            {{!-- pos show 1.4 --}}
-            <div id="negativeBtn2">
-                <button class="button secondary" id="negBtn2" for="negative" type="submit" name="negBtn">Oh, cool, did
-                    you mine gold?
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        {{!-- if negative first user response show 1.2--}}
-        <form id="interaction1-2" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    `Hah. Get yourself together. Why are you so scared of everything? I travelled this whole land
-                    barefoot,
-                    and I remember everyone being scared of Ol' {{ghost-name2}}, not the other way around!`
-                </p>
-
-            </div>
-            {{!-- pos show 1.5 --}}
-            <div id="positiveBtn3">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Uh, ok. Why do
-                    you smell so bad?
-                </button>
-            </div>
-            {{!-- neg show 1.6 --}}
-            <div id="negativeBtn3">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Oh, cool, did
-                    you mine gold?
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        {{!-- if positive second user response show 1.3 --}}
-        <form id="interaction1-3" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    `AHAHAHA I spent 18 hours a day digging through the dirt and you ask why I smell bad? Of course
-                    I do! I came from {{city-name2}}, but I dug hard and I even owned my own mine for awhile. The people
-                    around here
-                    called it Ol' {{ghost-name2}}'s Mud Pit. I think we might be on top of it now. This house was never
-                    here for me
-                    to see it before I just kind of...showed up.
-                </p>
-
-            </div>
-            {{!-- pos show 1.7 --}}
-            <div id="positiveBtn4">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Are you trapped
-                    here? I think I can help.
-                </button>
-            </div>
-            {{!-- neg show 1.8 --}}
-            <div id="negativeBtn4">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Have fun
-                    sitting here doing nothing.
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        {{!-- if negative second user response show 1.4--}}
-        <form id="interaction1-4" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    `Of course I did! What else would I have dug for? I left {{city-name2}} to dig for stuff when I was
-                    {{age2}} years old. Years later, there was an accident, I think, and all of the sudden I'm stuck
-                    here in this
-                    fancy house.`
-                </p>
-
-            </div>
-            {{!-- pos show 1.7 --}}
-            <div id="positiveBtn5">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Are you trapped
-                    here? I think I can help.
-                </button>
-            </div>
-            {{!-- neg show 1.8 --}}
-            <div id="negativeBtn5">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Have fun
-                    sitting here doing nothing.
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        <form id="interaction1-5" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    Will you help me, friend? I think I'm trapped, and as much I think {{ghost-name1}} is a nice
-                    lady, this house isn't my own and I need to keep searching for gold.
-                </p>
-
-            </div>
-            {{!-- pos show 1.7 --}}
-            <div id="positiveBtn6">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Yes, I'll help.
-                    I want to see you with all the gold in the ground.
-                </button>
-            </div>
-            {{!-- neg show 1.8 --}}
-            <div id="negativeBtn6">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">No, thanks, I'm
-                    good.
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-        <form id="interaction1-6" class="create-form hide">
-
-            <div class="form-group">
-
-                <p>
-                    `I'll mine your head for gold, {{user-name}}!!!`
-                </p>
-
-            </div>
-            {{!-- pos show 1.7 --}}
-            <div id="positiveBtn7">
-                <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Hey, I'm
-                    leaving. No need to get violent.
-                </button>
-            </div>
-            {{!-- neg show 1.8 --}}
-            <div id="negativeBtn7">
-                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">AHHH, NO!
-                </button>
-            </div>
-            <a href="/">
-                <button class="run">RUN!</button>
-            </a>
-        </form>
-
-
-
-
-            </div>
-            <div class="medium-5 column">
-
-
-            </div>
-            <div class="medium-1 column"></div>
         </div>
+        <div class="medium-1 column"></div>
     </div>
-<<<<<<< HEAD
-</div>
-=======
-    <div class="medium-1 column"></div>
->>>>>>> c9c4f6b8938271925632cfe2aa70fe0f1bfd5d7f
-</div>
