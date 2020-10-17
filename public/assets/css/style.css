@@ -1,4 +1,4 @@
-body.homePage {
+body{
   /* background-image: url(https://ashlynimages.s3.us-east-2.amazonaws.com/homePageImage.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto; */
@@ -11,9 +11,15 @@ body.homePage {
   background-color: black;
   max-height: 700px;
   height: auto;
-  
-  height: auto;
   max-height: 650px;
+}
+.bg2 {
+  position: fixed;
+  top: 0;
+  z-index: -3;
+  background-color: black;
+  min-height: 800px;
+  height: auto;
 }
 .center {
   display: flex;
@@ -44,10 +50,11 @@ body.homePage {
   left: 0;
   bottom: 0;
   width: 100%;
-  max-height: 250px;
+  height: 250px;
   background-color: black;
   color: white;
   text-align: center;
+  overflow-y:scroll; 
 }
 #indexGhostSprite {
   height: 200px;
@@ -107,3 +114,4 @@ body.startFoyerPage {
 .hide {
   display: none;
 }
+
