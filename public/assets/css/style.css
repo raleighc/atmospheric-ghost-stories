@@ -1,4 +1,4 @@
-body{
+body {
   /* background-image: url(https://ashlynimages.s3.us-east-2.amazonaws.com/homePageImage.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto; */
@@ -54,7 +54,7 @@ body{
   background-color: black;
   color: white;
   text-align: center;
-  overflow-y:scroll; 
+  overflow-y: scroll;
 }
 #indexGhostSprite {
   height: 200px;
@@ -114,4 +114,10 @@ body.startFoyerPage {
 .hide {
   display: none;
 }
-
+p {
+  background-color: white;
+  border-style: solid;
+  border-width: 3px;
+  border-color: blueviolet;
+  padding: 5px;
+}
