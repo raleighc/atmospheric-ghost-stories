@@ -1,7 +1,7 @@
 // const express = require("express")
 const db = require("../models");
 
-module.exports = function (app) {
+module.exports = (app) => {
   // Views Routes
 
   // home ghost routes for Ghost + User information
@@ -11,14 +11,14 @@ module.exports = function (app) {
       where: { id:1 },
       raw: true,
     })
-      .then(function (data) {
+      .then((data) => {
         let tempGhost = {
           fullName: data.fullName,
           deadFor: data.deadFor,
         };
         return tempGhost;
       })
-      .then(function (response) {
+      .then((response) => {
         res.render("home", { entryGhost: response });
       })
       .catch((err) => {
@@ -45,7 +45,7 @@ module.exports = function (app) {
           id: 1,
         },
       }
-    ).then(function (dbUser) {
+    ).then((dbUser) => {
       res.json(dbUser);
     });
   });
@@ -57,7 +57,7 @@ module.exports = function (app) {
       where: { id: 2 },
       raw: true,
     })
-      .then(function (data) {
+      .then((data) => {
         let tempGhost = {
           fullName: data.fullName,
           deadFor: data.deadFor,
@@ -66,7 +66,7 @@ module.exports = function (app) {
         };
         return tempGhost;
       })
-      .then(function (response) {
+      .then((response) => {
         db.User.findOne({
           where: { id: 1 },
           raw: true,
@@ -99,7 +99,7 @@ module.exports = function (app) {
         };
         return tempGhost;
       })
-      .then(function (response) {
+      .then((response) => {
         //==========
         db.User.findOne({
           where: { id: 1 },
@@ -135,7 +135,7 @@ module.exports = function (app) {
         };
         return tempGhost;
       })
-      .then(function (response) {
+      .then((response) => {
         db.User.findOne({
           where: { id: 1 },
           raw: true,
