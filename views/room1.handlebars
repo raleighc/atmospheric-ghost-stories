@@ -16,7 +16,7 @@
 
 
         {{!-- initial greeting from Ghost 1 --}}
-        <form id="interaction1-0" class="create-form hide" onsubmit="return false">
+        <form id="interaction1-0" class="create-form hide">
 
             <div class="form-group">
 
@@ -40,11 +40,11 @@
                 </button>
             </div>
             <a href="/">
-                <button class="run hide">RUN!</button>
+                <button class="run">RUN!</button>
             </a>
         </form>
         {{!-- if positive first user response show 1.1 --}}
-        <form id="interaction1-1" class="create-form hide" onsubmit="return false">
+        <form id="interaction1-1" class="create-form hide">
 
             <div class="form-group">
 
@@ -56,12 +56,12 @@
 
             </div>
             {{!-- pos show 1.3 --}}
-            <div class="positiveBtn2">
+            <div id="positiveBtn2">
                 <button class="button secondary" id="posBtn2" for="positive" type="submit" name="posBtn">POSITIVE
                 </button>
             </div>
             {{!-- pos show 1.4 --}}
-            <div class="negativeBtn2">
+            <div id="negativeBtn2">
                 <button class="button secondary" id="negBtn2" for="negative" type="submit" name="negBtn">NEGATIVE
                 </button>
             </div>
@@ -70,7 +70,7 @@
             </a>
         </form>
         {{!-- if negative first user response show 1.2--}}
-        <form id="interaction1-2" class="create-form hide" onsubmit="return false">
+        <form id="interaction1-2" class="create-form hide">
 
             <div class="form-group">
 
@@ -81,12 +81,12 @@
 
             </div>
             {{!-- pos show 1.5 --}}
-            <div class="positiveBtn3">
+            <div id="positiveBtn3">
                 <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
                 </button>
             </div>
             {{!-- neg show 1.6 --}}
-            <div class="negativeBtn3">
+            <div id="negativeBtn3">
                 <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">NEGATIVE
                 </button>
             </div>
@@ -95,11 +95,11 @@
             </a>
         </form>
         {{!-- if positive second user response show 1.3 --}}
-        <form id="interaction1-3" class="create-form hide" onsubmit="return false">
+        <form id="interaction1-3" class="create-form hide">
 
             <div class="form-group">
 
-                <p class="hide">
+                <p>
                     I was born in ST. LOUIS but I spent most of my life in this house. My husband, CHARLIE, and
                     I
                     loved this home. We raised our family here. My children took their first steps right over there by
@@ -112,22 +112,21 @@
 
             </div>
             {{!-- pos show 1.7 --}}
-            <div class="positiveBtn">
+            <div id="positiveBtn4">
                 <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
                 </button>
             </div>
             {{!-- neg show 1.8 --}}
-            <div class="negativeBtn">
-                <button onclick="startConvo1x7()" class="button secondary" id="negBtn3" for="negative" type="submit"
-                    name="negBtn">NEGATIVE
+            <div id="negativeBtn4">
+                <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">NEGATIVE
                 </button>
             </div>
             <a href="/">
-                <button class="run hide">RUN!</button>
+                <button class="run">RUN!</button>
             </a>
         </form>
         {{!-- if negative second user response show 1.4--}}
-        <form id="interaction1-4" class="create-form hide" onsubmit="return false">
+        <form id="interaction1-4" class="create-form hide">
 
             <div class="form-group">
 
@@ -139,20 +138,20 @@
 
             </div>
             {{!-- pos show 1.7 --}}
-            <div class="positiveBtn">
+            <div id="positiveBtn5">
                 <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
                 </button>
             </div>
             {{!-- neg show 1.8 --}}
-            <div class="negativeBtn">
+            <div id="negativeBtn5">
                 <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">NEGATIVE
                 </button>
             </div>
             <a href="/">
-                <button class="run hide">RUN!</button>
+                <button class="run">RUN!</button>
             </a>
         </form>
-        <form id="interaction1-5" class="create-form hide" onsubmit="return false">
+        <form id="interaction1-5" class="create-form hide">
 
             <div class="form-group">
 
@@ -170,20 +169,20 @@
 
             </div>
             {{!-- pos show 1.7 --}}
-            <div class="positiveBtn">
+            <div id="positiveBtn6">
                 <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
                 </button>
             </div>
             {{!-- neg show 1.8 --}}
-            <div class="negativeBtn">
+            <div id="negativeBtn6">
                 <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">NEGATIVE
                 </button>
             </div>
             <a href="/">
-                <button class="run hide">RUN!</button>
+                <button class="run">RUN!</button>
             </a>
         </form>
-        <form id="interaction1-5" class="create-form hide" onsubmit="return false">
+        <form id="interaction1-6" class="create-form hide">
 
             <div class="form-group">
 
@@ -193,17 +192,17 @@
 
             </div>
             {{!-- pos show 1.7 --}}
-            <div class="positiveBtn">
+            <div id="positiveBtn7">
                 <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">POSITIVE
                 </button>
             </div>
             {{!-- neg show 1.8 --}}
-            <div class="negativeBtn">
+            <div id="negativeBtn7">
                 <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">NEGATIVE
                 </button>
             </div>
             <a href="/">
-                <button class="run hide">RUN!</button>
+                <button class="run">RUN!</button>
             </a>
         </form>
 
