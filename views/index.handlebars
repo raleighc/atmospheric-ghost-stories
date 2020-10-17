@@ -1,4 +1,4 @@
-<body class="homePage">
+<main class="homePage">
 	<div class="grid-x">
 		<div class="cell">
 			<div class="center">
@@ -31,4 +31,16 @@
 			</div>
 		</container>
 	</div>
-</body>
+	<script> 
+	$.ajax({
+      method: "DELETE",
+      url: "/api/ghosts",
+    }).then(() => {
+	}); 
+	$.ajax({
+      method: "DELETE",
+      url: "/api/users",
+    }).then(() => {
+	}); 
+	</script>
+</main>
