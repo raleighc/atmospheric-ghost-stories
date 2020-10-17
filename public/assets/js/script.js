@@ -63,7 +63,7 @@ $(document).ready(function () {
     //This is my home.
     $("#interaction1-3").removeClass("hide");
   });
-  // n=>1-4
+  // neg=>1-4
   $("#negativeBtn3").on("click", function (event) {
     event.preventDefault();
     $("#interaction1-0").addClass("hide");
@@ -74,7 +74,7 @@ $(document).ready(function () {
     //This is my home.
     $("#interaction1-4").removeClass("hide");
   });
-  //=====================================
+
   $("#positiveBtn4").on("click", function (event) {
     event.preventDefault();
     console.log("you clicked");
@@ -89,7 +89,7 @@ $(document).ready(function () {
     $("#interaction1-5").removeClass("hide");
     //   //show btns 6
   });
-  // n=>1-6
+  // neg=>1-6
   $("#negativeBtn4").on("click", function (event) {
     event.preventDefault();
     console.log("you clicked");
@@ -102,7 +102,6 @@ $(document).ready(function () {
     $("#interaction1-4").addClass("hide");
     //GET OUT
     $("#interaction1-6").removeClass("hide");
-    //show btns 7
   });
   $("#positiveBtn5").on("click", function (event) {
     event.preventDefault();
@@ -116,7 +115,7 @@ $(document).ready(function () {
     //I was born in ST LOUIS
     $("#interaction1-5").removeClass("hide");
   });
-  // // n=>1-4
+  // // neg=>1-6
   $("#negativeBtn5").on("click", function (event) {
     event.preventDefault();
     $("#interaction1-0").addClass("hide");
@@ -129,45 +128,6 @@ $(document).ready(function () {
     //get out
     $("#interaction1-6").removeClass("hide");
   });
-  // third response option,
-  // p=>1-5
-
-  //====================================
-  // $("#posBtn3").on("click", function (event) {
-  //   event.preventDefault();
-  //   // Oh, calm down
-  //   $("#interaction1-2").addClass("hide");
-  //   //I was born in ST LOUIS
-  //   $("#interaction1-3").addClass("hide");
-  //   //This is my Home
-  //   $("#interaction1-4").addClass("hide");
-  //   //There are other spirits like myself
-  //   $("#interaction1-5").removeClass("hide");
-  //   //show btns 6
-  // });
-  // n=>1-6
-  // $("#negativeBtn3").on("click", function (event) {
-  //   event.preventDefault();
-  //   //I was born in ST LOUIS
-  //   $("#interaction1-3").addClass("hide");
-  //   //This is my Home
-  //   $("#interaction1-4").addClass("hide");
-  //   //GET OUT
-  //   $("#interaction1-6").removeClass("hide");
-  //   //show btns 7
-  // });
-
-  // fourth response option,
-  //p=>1.7
-
-  // $("#run").onclick = function () {
-  //   // return to foyer
-  //   window.location.href = "/";
-  // };
-
-  // $("#startBtn").onclick = function () {
-
-  // }
 
   storyOne = [
     {

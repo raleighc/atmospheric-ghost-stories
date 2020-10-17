@@ -161,10 +161,14 @@ body.startFoyerPage {
 .hide {
   display: none;
 }
-/* p {
+p {
+  color: black;
   background-color: white;
   border-style: solid;
   border-width: 3px;
   border-color: blueviolet;
   padding: 5px;
-} */
+}
+#foyerRoomText {
+  color: black;
+}

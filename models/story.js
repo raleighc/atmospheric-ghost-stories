@@ -14,7 +14,7 @@ module.exports = function (sequelize, DataTypes) {
     }
 
   });
-  Story.associate = function (models) {
+  Story.associate = (models) => {
     Story.belongsTo(models.Ghost, {
       foreignKey: {
         allowNull: false,
