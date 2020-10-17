@@ -75,7 +75,7 @@ function ghostTwoInfo() {
     .then(function (res) {
       db.Ghost.create({
         fullName: res.data.name,
-        deadFor: 166,
+        deadFor: 9,
         homeTown: "Cleveland, Ohio",
         faveSport: res.data.sport,
       })
