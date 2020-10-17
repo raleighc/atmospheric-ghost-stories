@@ -145,9 +145,6 @@ function ghostThreeInfo() {
         });
     });
 }
-// introGhost();
-
-// Views Routes
 
 require("./controllers/userController")(app);
 require("./controllers/htmlController")(app);
