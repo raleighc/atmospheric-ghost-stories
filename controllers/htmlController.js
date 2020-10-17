@@ -11,6 +11,10 @@ module.exports = function (app) {
     res.render("home");
   });
 
+  app.get("/foyer/:id", (req, res) => {
+    res.render("foyer");
+  });
+
   app.get("/ghosts/:id", (req, res) => {
     res.render("ghosts");
   });
