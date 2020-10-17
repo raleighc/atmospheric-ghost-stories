@@ -6,7 +6,7 @@ body{
 }
 .bg {
   position: fixed;
-  bottom: 250px;
+  bottom: 245px;
   z-index: -3;
   background-color: black;
   max-height: 700px;
@@ -60,8 +60,15 @@ body{
   height: 200px;
   opacity: 0.5;
   position: absolute;
-  bottom: 20%;
+  bottom: 22%;
   right: 35%;
+}
+#foyerGhostSprite {
+  height: 200px;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 30%;
+  right: 28%;
 }
 .label-text {
   color: white;
