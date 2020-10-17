@@ -133,17 +133,28 @@ body {
   display: none;
 }
 #age {
+  display:inline-block;
   align-content: center;
   justify-content: center;
-  margin-left: 40%;
+  vertical-align: center;
   width: 75px;
 }
 #gender {
+  display:inline-block;
   align-content: center;
   justify-content: center;
-  margin-left: 40%;
+  vertical-align: center;
   width: 200px;
 }
+#fullName{
+  display:inline-block;
+  align-content: center;
+  justify-content: center;
+  vertical-align: center;
+  width: 200px;
+}
+
+
 body.startFoyerPage {
   background-color: black;
 }
