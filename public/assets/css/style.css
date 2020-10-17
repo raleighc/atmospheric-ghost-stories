@@ -122,6 +122,7 @@ body.startFoyerPage {
   display: none;
 }
 p {
+  color: black;
   background-color: white;
   border-style: solid;
   border-width: 3px;
