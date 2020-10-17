@@ -16,143 +16,141 @@
 	</div>
 	<div class="footer">
 		{{!-- <container class="dialogueBox"> --}}
-			<hr>
-			{{!-- ghost speech --}}
-			<div class="grid-y medium-grid-frame">
-				<div class="cell medium-auto medium-cell-block-container">
-					<div class="grid-x grid-padding-x">
-						<div class="cell small-3 large-3"></div>
-						<div class="cell medium-2 medium-cell-block-y">
-							<form id="nameForm" class="create-form" onsubmit="return false">
+		<hr>
+		{{!-- ghost speech --}}
+		<div class="grid-y medium-grid-frame">
+			<div class="cell medium-auto medium-cell-block-container">
+				<div class="grid-x grid-padding-x">
+					<div class="cell small-3 large-3"></div>
+					<div class="cell medium-2 medium-cell-block-y">
+						<form id="nameForm" class="create-form" onsubmit="return false">
 
-								<div class="form-group">
-									<label class="label-text" for="fullName">AH! Hello. You scared me. I wasn’t
-										expecting you.
-										My name is
-										{{entryGhost.fullName}}
-										What is your name?</label>
-									<input type="text" id="fullName" name="fullName">
-								</div>
-								<div class="nameSubmitBtn">
-									<button class="button secondary" id="name-btn" for="fullName" type="submit"
-										name="fullName">Add
-										Name</button>
-								</div>
-							</form>
-							<div id="foyerOption1" class="ghost-speech" onsubmit="return false">
-
-								<div>
-									<label class="label-text" for="fullName">Pleased to meet you <span class="characterName"></span>.
-
-										No need to be scared, we are only ghosts.
-										<br>
-										Oh the door is locked? How did that happen? Were you trying to leave
-										already?</label>
-								</div>
-
+							<div class="form-group">
+								<label class="label-text" for="fullName">AH! Hello. You scared me. I wasn’t
+									expecting you.
+									My name is
+									{{entryGhost.fullName}}
+									What is your name?</label>
+								<input type="text" id="fullName" name="fullName">
 							</div>
-							<div id="foyerPosRes" class="ghost-speech" onsubmit="return false">
-
-								<div>
-									<label class="label-text">Perfect, I’m glad you enjoy our company. But we
-										know you will eventually tire of us. If you can find favor with the other ghosts
-										in the
-										house they will tell you their story. If you listen and help free them from the
-										house
-										they will present you with the key to your escape. But if they do not appreciate
-										how you
-										treat them, your time with them may be cut short.</label>
-								</div>
-								<div class="posNegBtn">
-									<button class="button secondary" id="posNext-btn" for="age" type="submit"
-										name="age">Next</button>
-								</div>
-
+							<div class="nameSubmitBtn">
+								<button class="button secondary" id="name-btn" for="fullName" type="submit"
+									name="fullName">Add
+									Name</button>
 							</div>
-							<div id="foyerNegRes" class="ghost-speech" onsubmit="return false">
+						</form>
+						<div id="foyerOption1" class="ghost-speech" onsubmit="return false">
 
-								<div>
-									<label class="label-text"> Well you aren’t going to get out by being so rude.
-										We hold the key to your escape if you can help us escape. If you can find favor
-										with the
-										other ghosts in the house they will tell you their story. If you listen and help
-										free
-										them from the house they will present you with the key to your escape. But if
-										they do
-										not appreciate how you treat them, your time with them may be cut short.</label>
-								</div>
-								<div class="negNextBtn">
-									<button class="button secondary" id="negNext-btn">Next</button>
-								</div>
+							<div>
+								<label class="label-text" for="fullName">Pleased to meet you <span
+										class="characterName"></span>.
 
+									No need to be scared, we are only ghosts.
+									<br>
+									Oh the door is locked? How did that happen? Were you trying to leave
+									already?</label>
 							</div>
-							<div id="foyerAgeGender" class="ghost-speech" onsubmit="return false">
 
-								<div>
-									<label class="label-text">I’ve lived...or I should say, resided in this house
-										for 170 years now. It is quite pleasant and you will enjoy your time here. Let
-										me know a
-										little more about yourself.</label>
-								</div>
-
-							</div>
-							<div id="foyerLastPrompt" class="ghost-speech" onsubmit="return false">
-
-								<div>
-									<label class="label-text">I feel like I know you better now. The other ghosts
-										don’t like strangers. Here! Take this token so they will know that we are
-										friends. They
-										will start to trust you if they see it. Enjoy your stay!</label>
-								</div>
-
-							</div>
-							<br>
 						</div>
+						<div id="foyerPosRes" class="ghost-speech" onsubmit="return false">
 
-						<div class="cell medium-2 medium-cell-block-y">
-							<div id="foyerStayChoice">
-								<div class="nameSubmitBtn">
-									<button class="button secondary" id="foyer-pos-btn" type="submit"
-										name="posFoyer">No, I would never leave so soon.</button>
-								</div>
-								<div class="nameSubmitBtn">
-									<button class="button secondary" id="foyer-neg-btn" type="submit"
-										name="negFoyer">Yes, get me out of here!</button>
-								</div>
+							<div>
+								<label class="label-text">Perfect, I’m glad you enjoy our company. But we
+									know you will eventually tire of us. If you can find favor with the other ghosts
+									in the
+									house they will tell you their story. If you listen and help free them from the
+									house
+									they will present you with the key to your escape. But if they do not appreciate
+									how you
+									treat them, your time with them may be cut short.</label>
 							</div>
-							<form id="ageForm" class="create-form" onsubmit="return false">
-
-								<div class="form-group">
-									<label class="label-text" for="age">What is your age?</label>
-									<input id="age" type="number" min="1" max="100" value="78">
-								</div>
-								<div class="form-group">
-									<label class="label-text" for="gender">What is your gender?</label>
-									<select type="text" id="gender" name="gender">
-										<option value="" disabled selected hidden>Select Gender</option>
-										<option value="Male">Male
-										</option>
-										<option value="Female">Female</option>
-										<option value="Other">Other</option>
-									</select>
-								</div>
-								<div class="ageSubmitBtn">
-									<button class="button secondary" id="age-btn" for="age" type="submit" name="age">Add
-										Info</button>
-								</div>
-							</form>
-
-							<div id="foyerRoomChoice">
-								<p>Which room would you like to enter?</p>
-								<a class="button secondary" href="/room1/2" id="ghostOne">Room 1</a>
-								<br>
-								<a class="button secondary" href="/room2/3" id="ghostTwo">Room 2</a>
-								<br>
-								<a class="button secondary" href="/room3/4" id="ghostThree">Room 3</a>
+							<div class="posNegBtn">
+								<button class="button secondary" id="posNext-btn" for="age" type="submit"
+									name="age">Next</button>
 							</div>
+						</div>
+						<div id="foyerNegRes" class="ghost-speech" onsubmit="return false">
+
+							<div>
+								<label class="label-text"> Well you aren’t going to get out by being so rude.
+									We hold the key to your escape if you can help us escape. If you can find favor
+									with the
+									other ghosts in the house they will tell you their story. If you listen and help
+									free
+									them from the house they will present you with the key to your escape. But if
+									they do
+									not appreciate how you treat them, your time with them may be cut short.</label>
+							</div>
+							<div class="negNextBtn">
+								<button class="button secondary" id="negNext-btn">Next</button>
+							</div>
+
+						</div>
+						<div id="foyerAgeGender" class="ghost-speech" onsubmit="return false">
+
+							<div>
+								<label class="label-text">I’ve lived...or I should say, resided in this house
+									for 170 years now. It is quite pleasant and you will enjoy your time here. Let
+									me know a
+									little more about yourself.</label>
+							</div>
+
+						</div>
+						<div id="foyerLastPrompt" class="ghost-speech" onsubmit="return false">
+
+							<div>
+								<label class="label-text">I feel like I know you better now. The other ghosts
+									don’t like strangers. Here! Take this token so they will know that we are
+									friends. They
+									will start to trust you if they see it. Enjoy your stay!</label>
+							</div>
+
+						</div>
+						<br>
+					</div>
+
+					<div class="cell medium-2 medium-cell-block-y">
+						<div id="foyerStayChoice">
+							<div class="nameSubmitBtn">
+								<button class="button secondary" id="foyer-pos-btn" type="submit" name="posFoyer">No, I
+									would never leave so soon.</button>
+							</div>
+							<div class="nameSubmitBtn">
+								<button class="button secondary" id="foyer-neg-btn" type="submit" name="negFoyer">Yes,
+									get me out of here!</button>
+							</div>
+						</div>
+						<form id="ageForm" class="create-form" onsubmit="return false">
+
+							<div class="form-group">
+								<label class="label-text" for="age">What is your age?</label>
+								<input id="age" type="number" min="1" max="100" value="78">
+							</div>
+							<div class="form-group">
+								<label class="label-text" for="gender">What is your gender?</label>
+								<select type="text" id="gender" name="gender">
+									<option value="" disabled selected hidden>Select Gender</option>
+									<option value="Male">Male
+									</option>
+									<option value="Female">Female</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<div class="ageSubmitBtn">
+								<button class="button secondary" id="age-btn" for="age" type="submit" name="age">Add
+									Info</button>
+							</div>
+						</form>
+
+						<div id="foyerRoomChoice">
+							<p id="foyerRoomText">Which room would you like to enter?</p>
+							<a class="button secondary" href="/room1/2" id="ghostOne">Room 1</a>
+							<a class="button secondary" href="/room2/3" id="ghostTwo">Room 2</a>
+							<a class="button secondary" href="/room3/4" id="ghostThree">Room 3</a>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 
 	</div>
