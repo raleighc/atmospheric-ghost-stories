@@ -121,10 +121,10 @@ body.startFoyerPage {
 .hide {
   display: none;
 }
-p {
+/* p {
   background-color: white;
   border-style: solid;
   border-width: 3px;
   border-color: blueviolet;
   padding: 5px;
-}
+} */
