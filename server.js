@@ -34,7 +34,7 @@ app.delete("/api/ghosts", function (req, res) {
 app.delete("/api/users", function (req, res) {
   db.User.destroy({
     where: {
-      id: 1
+      identifier: 1
     }
   }
   ).then(() => {

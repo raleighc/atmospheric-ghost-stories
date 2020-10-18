@@ -27,7 +27,7 @@ module.exports = (app) => {
   });
 
   app.post("/api/users", (req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
     db.User.create(req.body).then((newUser) => {
       res.json(newUser);
     });
@@ -42,7 +42,7 @@ module.exports = (app) => {
       },
       {
         where: {
-          id: req.body,
+          identifier: 1,
         },
       }
     ).then((dbUser) => {
@@ -67,21 +67,21 @@ module.exports = (app) => {
         return tempGhost;
       })
       .then((response) => {
-        // db.User.findOne({
-        //   where: { identifier: 1 },
-        //   raw: true,
-        // })
-        //   .then((results) => {
-        //     let nameOfUser = {
-        //       fullName: results.fullName,
-        //     };
-        res.render("room1", { entryGhost: response });
-      })
-      .catch((err) => {
-        console.log(err);
+        db.User.findOne({
+          where: { identifier: 1 },
+          raw: true,
+        })
+          .then((results) => {
+            let nameOfUser = {
+              fullName: results.fullName,
+            };
+            res.render("room1", { entryGhost: response, viewUser: nameOfUser });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       });
   });
-  // });
 
   //room 2 ghost routes for Ghost + User information
   app.get("/room2/3", (req, res) => {
@@ -101,36 +101,36 @@ module.exports = (app) => {
       })
       .then((response) => {
         //==========
-        // db.User.findOne({
-        //   where: { id: 1 },
-        //   raw: true,
-        // })
-        //   .then((results) => {
-        //     let nameOfUser = {
-        //       fullName: results.fullName,
-        //     };
-        //     return nameOfUser;
-        //   })
-        //   .then((flow) => {
-        db.Ghost.findOne({
-          where: { deadFor: 170 },
+        db.User.findOne({
+          where: { identifier: 1 },
           raw: true,
-        }).then((ghostData) => {
-          let frontGhost = {
-            fullName: ghostData.fullName,
-          };
-          res.render("room2", {
-            entryGhost: response,
-            // viewUser: flow,
-            frontGhost: frontGhost,
+        })
+          .then((results) => {
+            let nameOfUser = {
+              fullName: results.fullName,
+            };
+            return nameOfUser;
+          })
+          .then((flow) => {
+            db.Ghost.findOne({
+              where: { deadFor: 170 },
+              raw: true,
+            }).then((ghostData) => {
+              let frontGhost = {
+                fullName: ghostData.fullName,
+              };
+              res.render("room2", {
+                entryGhost: response,
+                viewUser: flow,
+                frontGhost: frontGhost,
+              });
+            });
+          })
+          .catch((err) => {
+            console.log(err);
           });
-        });
-      })
-      .catch((err) => {
-        console.log(err);
       });
   });
-  // });
 
   //room 3 ghost routes for Ghost name/favsport + User information
 

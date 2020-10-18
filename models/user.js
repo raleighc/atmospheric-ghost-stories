@@ -15,6 +15,9 @@ module.exports = function (sequelize, DataTypes) {
         // notEmpty: true,
         // notNull: true,
       },
+      identifier: {
+        type: DataTypes.INTEGER,
+      }
     });
     return User
   };
