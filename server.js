@@ -58,7 +58,7 @@ app.delete("/api/users", function (req, res) {
     });
 });
 
-// introGhost();
+introGhost();
 
 function introGhost() {
   axios
