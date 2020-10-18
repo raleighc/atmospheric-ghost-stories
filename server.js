@@ -20,49 +20,30 @@ app.use(express.static("public"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// API Routes
-app.get("/api/config", (req, res) => {
-  res.json({
-    success: true,
+app.delete("/api/ghosts", function (req, res) {
+  db.Ghost.destroy({
+    where: { deadFor: [170, 65, 9, 272] },
+  }
+  ).then(() => {
+    introGhost();
+  }).catch(() => {
+    console.log();
   });
 });
 
-app.delete("/api/ghosts", function (req, res) {
-  // console.log("delete ghosts");
-  db.sequelize
-    .query("delete from ghosts")
-    .then((results) => {
-      // console.log("ghost delete");
-      db.sequelize
-        .query("alter table ghosts auto_increment = 1")
-        .then(() => {
-          introGhost();
-        })
-        .catch(() => {
-          console.log();
-        });
-    })
-    .catch(() => {
-      console.log();
-    });
-});
 app.delete("/api/users", function (req, res) {
-  db.sequelize
-    .query("delete from users")
-    .then((results) => {
-      db.sequelize
-        .query("alter table users auto_increment = 1")
-        .then(() => {
-          console.log("user table ready")
-        })
-        .catch(() => {
-          console.log();
-        });
-    })
-    .catch(() => {
-      console.log();
-    });
+  db.User.destroy({
+    where: {
+      identifier: 1
+    }
+  }
+  ).then(() => {
+  }).catch(() => {
+    console.log();
+  });
 });
+
+introGhost();
 
 function introGhost() {
   axios
