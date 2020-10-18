@@ -7,6 +7,10 @@ module.exports = function (app) {
     res.render("index");
   });
 
+  app.get("/startpage/:id", (req, res) => {
+    res.render("startpage");
+  });
+
   app.get("/home/:id", (req, res) => {
     res.render("home");
   });
