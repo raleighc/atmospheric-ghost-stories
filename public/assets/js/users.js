@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  
+
   $("#newStartEnterBtn").on("click", function (event) {
     $.ajax({
 			method: "DELETE",
@@ -18,6 +20,7 @@ $(document).ready(function () {
     var userName = {
       // name from name input
       fullName: $("#fullName").val().trim(),
+      identifier: 1
     };
     // console.log(userName);
     // send an AJAX POST-request with jQuery

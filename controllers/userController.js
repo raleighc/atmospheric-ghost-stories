@@ -8,7 +8,7 @@ module.exports = (app) => {
   app.get("/home/1", (req, res) => {
     //
     db.Ghost.findOne({
-      where: { id: 1 },
+      where: { deadFor: 170 },
       raw: true,
     })
       .then((data) => {
@@ -42,7 +42,7 @@ module.exports = (app) => {
       },
       {
         where: {
-          id: 1,
+          identifier: 1,
         },
       }
     ).then((dbUser) => {
@@ -54,7 +54,7 @@ module.exports = (app) => {
   app.get("/room1/2", (req, res) => {
     //
     db.Ghost.findOne({
-      where: { id: 2 },
+      where: { deadFor: 65 },
       raw: true,
     })
       .then((data) => {
@@ -68,7 +68,7 @@ module.exports = (app) => {
       })
       .then((response) => {
         db.User.findOne({
-          where: { id: 1 },
+          where: { identifier: 1 },
           raw: true,
         })
           .then((results) => {
@@ -87,7 +87,7 @@ module.exports = (app) => {
   app.get("/room2/3", (req, res) => {
     //=============
     db.Ghost.findOne({
-      where: { id: 3 },
+      where: { deadFor: 9 },
       raw: true,
     })
       .then(function (data) {
@@ -102,7 +102,7 @@ module.exports = (app) => {
       .then((response) => {
         //==========
         db.User.findOne({
-          where: { id: 1 },
+          where: { identifier: 1 },
           raw: true,
         })
           .then((results) => {
@@ -113,7 +113,7 @@ module.exports = (app) => {
           })
           .then((flow) => {
             db.Ghost.findOne({
-              where: { id: 1 },
+              where: { deadFor: 170 },
               raw: true,
             }).then((ghostData) => {
               let frontGhost = {
@@ -134,10 +134,11 @@ module.exports = (app) => {
 
   //room 3 ghost routes for Ghost name/favsport + User information
 
-  app.get("/room3/4", (req, res) => {3
+  app.get("/room3/4", (req, res) => {
+    3;
     //=============
     db.Ghost.findOne({
-      where: { id: 4 },
+      where: { deadFor: 272 },
       raw: true,
     })
       .then(function (data) {
@@ -151,69 +152,34 @@ module.exports = (app) => {
       })
       .then((response) => {
         //==========
-        db.User.findOne({
-          where: { id: 1 },
+        // db.User.findOne({
+        //   where: { id: 1 },
+        //   raw: true,
+        // })
+        //   .then((results) => {
+        //     let nameOfUser = {
+        //       fullName: results.fullName,
+        //     };
+        //     return nameOfUser;
+        //   })
+        //   .then((flow) => {
+        db.Ghost.findOne({
+          where: { deadFor: 170 },
           raw: true,
-        })
-          .then((results) => {
-            let nameOfUser = {
-              fullName: results.fullName,
-            };
-            return nameOfUser;
-          })
-          .then((flow) => {
-            db.Ghost.findOne({
-              where: { id: 1 },
-              raw: true,
-            }).then((ghostData) => {
-              let frontGhost = {
-                fullName: ghostData.fullName,
-              };
-              res.render("room3", {
-                entryGhost: response,
-                viewUser: flow,
-                frontGhost: frontGhost,
-              });
-            });
-          })
-          .catch((err) => {
-            console.log(err);
+        }).then((ghostData) => {
+          let frontGhost = {
+            fullName: ghostData.fullName,
+          };
+          res.render("room3", {
+            entryGhost: response,
+            // viewUser: flow,
+            frontGhost: frontGhost,
           });
+        });
+      })
+      .catch((err) => {
+        console.log(err);
       });
   });
-
-
-  // app.get("/room3/4", (req, res) => {
-  //   //
-  //   db.Ghost.findOne({
-  //     where: { id: 4 },
-  //     raw: true,
-  //   })
-  //     .then(function (data) {
-  //       let tempGhost = {
-  //         fullName: data.fullName,
-  //         deadFor: data.deadFor,
-  //         homeTown: data.homeTown,
-  //         faveSport: data.faveSport,
-  //       };
-  //       return tempGhost;
-  //     })
-  //     .then((response) => {
-  //       db.User.findOne({
-  //         where: { id: 1 },
-  //         raw: true,
-  //       })
-  //         .then((results) => {
-  //           let nameOfUser = {
-  //             fullName: results.fullName,
-  //           };
-  //           // console.log(nameOfUser)
-
-  //           res.render("room3", { entryGhost: response, viewUser: nameOfUser });
-  //         })
-  //         .catch((err) => {
-  //           console.log(err);
-  //         });
-  //     });
   // });
 };
