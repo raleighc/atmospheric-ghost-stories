@@ -1,4 +1,16 @@
 $(document).ready(function () {
+
+  $("#newStartEnterBtn").on("click", function (event) {
+    $.ajax({
+			method: "DELETE",
+			url: "/api/ghosts",
+		});
+		$.ajax({
+			method: "DELETE",
+			url: "/api/users",
+		});
+  });
+
   $("#name-btn").on("click", function (event) {
     event.preventDefault();
 

@@ -21,44 +21,44 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
-// app.delete("/api/ghosts", function (req, res) {
-//   // console.log("delete ghosts");
-//   db.sequelize
-//     .query("delete from ghosts")
-//     .then((results) => {
-//       // console.log("ghost delete");
-//       db.sequelize
-//         .query("alter table ghosts auto_increment = 1")
-//         .then(() => {
-//           introGhost();
-//         })
-//         .catch(() => {
-//           console.log();
-//         });
-//     })
-//     .catch(() => {
-//       console.log();
-//     });
-// });
-// app.delete("/api/users", function (req, res) {
-//   db.sequelize
-//     .query("delete from users")
-//     .then((results) => {
-//       db.sequelize
-//         .query("alter table users auto_increment = 1")
-//         .then(() => {
-//           console.log("user table ready")
-//         })
-//         .catch(() => {
-//           console.log();
-//         });
-//     })
-//     .catch(() => {
-//       console.log();
-//     });
-// });
+app.delete("/api/ghosts", function (req, res) {
+  // console.log("delete ghosts");
+  db.sequelize
+    .query("delete from ghosts")
+    .then((results) => {
+      // console.log("ghost delete");
+      db.sequelize
+        .query("alter table ghosts auto_increment = 1")
+        .then(() => {
+          introGhost();
+        })
+        .catch(() => {
+          console.log();
+        });
+    })
+    .catch(() => {
+      console.log();
+    });
+});
+app.delete("/api/users", function (req, res) {
+  db.sequelize
+    .query("delete from users")
+    .then((results) => {
+      db.sequelize
+        .query("alter table users auto_increment = 1")
+        .then(() => {
+          console.log("user table ready")
+        })
+        .catch(() => {
+          console.log();
+        });
+    })
+    .catch(() => {
+      console.log();
+    });
+});
 
-introGhost();
+// introGhost();
 
 function introGhost() {
   axios
