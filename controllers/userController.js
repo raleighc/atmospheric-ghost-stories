@@ -8,7 +8,7 @@ module.exports = (app) => {
   app.get("/home/1", (req, res) => {
     //
     db.Ghost.findOne({
-      where: { id:1 },
+      where: { id: 1 },
       raw: true,
     })
       .then((data) => {
@@ -106,11 +106,25 @@ module.exports = (app) => {
           raw: true,
         })
           .then((results) => {
-           
             let nameOfUser = {
               fullName: results.fullName,
             };
-            res.render("room2", { entryGhost: response, viewUser: nameOfUser });
+            return nameOfUser;
+          })
+          .then((flow) => {
+            db.Ghost.findOne({
+              where: { id: 1 },
+              raw: true,
+            }).then((ghostData) => {
+              let frontGhost = {
+                fullName: ghostData.fullName,
+              };
+              res.render("room2", {
+                entryGhost: response,
+                viewUser: flow,
+                frontGhost: frontGhost,
+              });
+            });
           })
           .catch((err) => {
             console.log(err);
@@ -118,10 +132,10 @@ module.exports = (app) => {
       });
   });
 
-
   //room 3 ghost routes for Ghost name/favsport + User information
-  app.get("/room3/4", (req, res) => {
-    //
+
+  app.get("/room3/4", (req, res) => {3
+    //=============
     db.Ghost.findOne({
       where: { id: 4 },
       raw: true,
@@ -136,6 +150,7 @@ module.exports = (app) => {
         return tempGhost;
       })
       .then((response) => {
+        //==========
         db.User.findOne({
           where: { id: 1 },
           raw: true,
@@ -144,13 +159,61 @@ module.exports = (app) => {
             let nameOfUser = {
               fullName: results.fullName,
             };
-            // console.log(nameOfUser)
-            
-            res.render("room3", { entryGhost: response, viewUser: nameOfUser });
+            return nameOfUser;
+          })
+          .then((flow) => {
+            db.Ghost.findOne({
+              where: { id: 1 },
+              raw: true,
+            }).then((ghostData) => {
+              let frontGhost = {
+                fullName: ghostData.fullName,
+              };
+              res.render("room3", {
+                entryGhost: response,
+                viewUser: flow,
+                frontGhost: frontGhost,
+              });
+            });
           })
           .catch((err) => {
             console.log(err);
           });
       });
   });
+
+
+  // app.get("/room3/4", (req, res) => {
+  //   //
+  //   db.Ghost.findOne({
+  //     where: { id: 4 },
+  //     raw: true,
+  //   })
+  //     .then(function (data) {
+  //       let tempGhost = {
+  //         fullName: data.fullName,
+  //         deadFor: data.deadFor,
+  //         homeTown: data.homeTown,
+  //         faveSport: data.faveSport,
+  //       };
+  //       return tempGhost;
+  //     })
+  //     .then((response) => {
+  //       db.User.findOne({
+  //         where: { id: 1 },
+  //         raw: true,
+  //       })
+  //         .then((results) => {
+  //           let nameOfUser = {
+  //             fullName: results.fullName,
+  //           };
+  //           // console.log(nameOfUser)
+
+  //           res.render("room3", { entryGhost: response, viewUser: nameOfUser });
+  //         })
+  //         .catch((err) => {
+  //           console.log(err);
+  //         });
+  //     });
+  // });
 };
