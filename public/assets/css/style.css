@@ -1,9 +1,23 @@
 body {
-  /* background-image: url(https://ashlynimages.s3.us-east-2.amazonaws.com/homePageImage.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto; */
   background-color: black;
 }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  overflow-y: scroll;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Background Image Styling */
 .bg {
   position: fixed;
   bottom: 245px;
@@ -29,10 +43,7 @@ body {
   min-height: 700px;
   height: auto;
 }
-.center {
-  display: flex;
-  justify-content: center;
-}
+
 
 #startBtn {
   color: black;
@@ -42,28 +53,7 @@ body {
   background-color: blueviolet;
 }
 
-/* .bgwidth {
-  width: auto;
-  height: auto;
-  max-width: 1200px;
-  max-height: 1200px;
-}
-.bgheight {
-  width: auto;
-  height: auto;
-  max-width: 1200px;
-} */
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 250px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  overflow-y: scroll;
-}
+/* Ghost Image Styling */
 #indexGhostSprite {
   height: 200px;
   opacity: 0.5;
@@ -99,6 +89,7 @@ body {
   bottom: 30%;
   right: 60%;
 }
+
 .label-text {
   color: white;
 }
