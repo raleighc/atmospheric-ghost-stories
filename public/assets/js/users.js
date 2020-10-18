@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  
+
   $("#newStartEnterBtn").on("click", function (event) {
     $.ajax({
 			method: "DELETE",
