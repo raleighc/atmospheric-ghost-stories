@@ -1,3 +1,4 @@
+/* Main Styling */
 body {
   background-color: black;
 }
@@ -16,6 +17,23 @@ body {
   display: flex;
   justify-content: center;
 }
+.startFoyerPage {
+  background-color: black;
+}
+.hide {
+  display: none;
+}
+#startBtn {
+  color: black;
+  padding: 15px;
+  border-style: solid;
+  border-color: white;
+  background-color: blueviolet;
+}
+.label-text {
+  color: white;
+}
+
 
 /* Background Image Styling */
 .bg {
@@ -44,14 +62,6 @@ body {
   height: auto;
 }
 
-
-#startBtn {
-  color: black;
-  padding: 15px;
-  border-style: solid;
-  border-color: white;
-  background-color: blueviolet;
-}
 
 /* Ghost Image Styling */
 #indexGhostSprite {
@@ -90,9 +100,7 @@ body {
   right: 60%;
 }
 
-.label-text {
-  color: white;
-}
+/* Display Styling */
 #nameForm {
   display: block;
 }
@@ -123,6 +131,8 @@ body {
 #foyerLastPrompt {
   display: none;
 }
+
+/* User Input Forms */
 #age {
   display:inline-block;
   align-content: center;
@@ -145,14 +155,3 @@ body {
   width: 200px;
 }
 
-
-body.startFoyerPage {
-  background-color: black;
-}
-.hide {
-  display: none;
-}
-
-#foyerRoomText {
-  color: black;
-}
