@@ -16,12 +16,14 @@ This project is a walk-through of a haunted house in which the user can interact
 [Usage](#Usage),
 [License](#License),
 [Contributors](#Contributors),
-[Questions](#Questions)
+[Questions](#Questions),
 [Further Development](#Further_Development)
 
 ## View:
 
 Visit https://cryptic-encounters.herokuapp.com/ to start your ghost adventure!
+
+![Screenshot](public\assets\images\cryptic_encounters_screenshot.png)
 
 ## Usage
 
@@ -37,7 +39,12 @@ Nathan Calle, Raleigh Chesney, Lauren Noeltner, Ashlyn Smith, and Eric Hoversten
 
 ## Questions
 
-You can ask questions by contacting one of the developers at: https://github.com/Napica, https://github.com/raleighc, https://github.com/LNoeltner1, or https://github.com/AshlynMarie22
+You can ask questions by contacting one of the developers on GitHub at:
+
+- https://github.com/Napica
+- https://github.com/raleighc
+- https://github.com/LNoeltner1
+- https://github.com/AshlynMarie22
 
 ## Further_Development
 
