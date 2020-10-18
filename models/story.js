@@ -23,11 +23,3 @@ module.exports = function (sequelize, DataTypes) {
   };
   return Story;
 };
-
-// Story.associate = function (models) {
-//     Story.belongsTo(models.Ghost, {
-//         foreignKey: {
-//             allowNull: false,
-//         }
-//     })
-// }

@@ -1,10 +1,7 @@
 // Requiring Dependencies
 const express = require("express");
 const exphbs = require("express-handlebars");
-const axios = require("axios");
 const db = require("./models");
-const userController = require("./controllers/userController");
-const htmlController = require("./controllers/htmlController");
 // const { Model } = require("sequelize/types");
 
 // Sets up the Express App
@@ -19,113 +16,6 @@ app.use(express.static("public"));
 // Handlebars Middleware
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
-app.delete("/api/ghosts", function (req, res) {
-  db.Ghost.destroy({
-    where: { deadFor: [170, 65, 9, 272] },
-  }
-  ).then(() => {
-    introGhost();
-  }).catch(() => {
-    console.log();
-  });
-});
-
-app.delete("/api/users", function (req, res) {
-  db.User.destroy({
-    where: {
-      identifier: 1
-    }
-  }
-  ).then(() => {
-  }).catch(() => {
-    console.log();
-  });
-});
-
-introGhost();
-
-function introGhost() {
-  axios
-    .get("https://api.namefake.com/english-united-states/female/")
-    .then(function (res) {
-      db.Ghost.create({
-        fullName: res.data.name,
-        deadFor: 170,
-        homeTown: "Atlanta, Georgia",
-        faveSport: res.data.sport,
-      })
-        .then(() => {
-          ghostOneInfo();
-        })
-        .catch(() => {
-          console.log();
-        });
-    })
-    .catch(() => {
-      console.log();
-    });
-}
-function ghostOneInfo() {
-  axios
-    .get("https://api.namefake.com/english-united-states/female/")
-    .then(function (res) {
-      db.Ghost.create({
-        fullName: res.data.name,
-        deadFor: 65,
-        homeTown: "Arno, Virginia",
-        faveSport: res.data.sport,
-      })
-        .then(() => {
-          ghostTwoInfo();
-        })
-        .catch(() => {
-          console.log();
-        });
-    })
-    .catch(() => {
-      console.log();
-    });
-}
-function ghostTwoInfo() {
-  axios
-    .get("https://api.namefake.com/english-united-states/male/")
-    .then(function (res) {
-      db.Ghost.create({
-        fullName: res.data.name,
-        deadFor: 9,
-        homeTown: "Cleveland, Ohio",
-        faveSport: res.data.sport,
-      })
-        .then(() => {
-          ghostThreeInfo();
-        })
-        .catch(() => {
-          console.log();
-        });
-    })
-    .catch(() => {
-      console.log();
-    });
-}
-function ghostThreeInfo() {
-  axios
-    .get("https://api.namefake.com/english-united-states/male/")
-    .then(function (res) {
-      db.Ghost.create({
-        fullName: res.data.name,
-        deadFor: 272,
-        homeTown: "Liverpool, England",
-        faveSport: res.data.sport,
-      })
-        .catch(() => {
-          console.log();
-        })
-        .catch(() => {
-          console.log();
-        });
-    });
-}
 
 require("./controllers/userController")(app);
 require("./controllers/htmlController")(app);
