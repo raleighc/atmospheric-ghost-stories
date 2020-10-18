@@ -1,7 +1,5 @@
 ![License](https://img.shields.io/badge/License-MIT-red)
 
-TESTING HEROKU
-
 ## Title
 
 Cryptic Encounters
@@ -25,7 +23,7 @@ This project is a walk-through of a haunted house in which the user can interact
 
 Visit https://cryptic-encounters.herokuapp.com/ to start your ghost adventure!
 
-![Screenshot](public\assets\images\cryptic_encounters_screenshot.png)
+![Screenshot](./public/assets/images/cryptic_encounters_screenshot.png)
 
 ## Usage
 

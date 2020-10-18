@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "shepard1",
+    "password": "NewRalE88?",
     "database": "ghostStories_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -14,10 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "rqtech845j6o7423",
-    "password": "sis0apzvkzoaprl7",
-    "database": "q8sjb051gvnxuybt",
-    "host": "f2fbe0zvg9j8p9ng.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
-  }
+ }
 }

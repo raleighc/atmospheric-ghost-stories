@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-  
-
   $("#newStartEnterBtn").on("click", function (event) {
     $.ajax({
 			method: "DELETE",
@@ -32,8 +30,7 @@ $(document).ready(function () {
         console.log(response);
         displaystay();
       });
-    // empty each input box by replacing the value with an empty string
-    // $("#name-btn").val("");
+   
   });
 
   function displaystay() {

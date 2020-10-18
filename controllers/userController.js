@@ -1,5 +1,6 @@
 // const express = require("express")
 const db = require("../models");
+const axios = require("axios");
 
 module.exports = (app) => {
   // Views Routes
@@ -181,5 +182,113 @@ module.exports = (app) => {
         console.log(err);
       });
   });
+
+  app.delete("/api/ghosts", function (req, res) {
+    db.Ghost.destroy({
+      where: { deadFor: [170, 65, 9, 272] },
+    }
+    ).then(() => {
+      introGhost();
+    }).catch(() => {
+      console.log();
+    });
+  });
+  
+  app.delete("/api/users", function (req, res) {
+    db.User.destroy({
+      where: {
+        identifier: 1
+      }
+    }
+    ).then(() => {
+    }).catch(() => {
+      console.log();
+    });
+  });
+  
+  introGhost();
+  
+  function introGhost() {
+    axios
+      .get("https://api.namefake.com/english-united-states/female/")
+      .then(function (res) {
+        db.Ghost.create({
+          fullName: res.data.name,
+          deadFor: 170,
+          homeTown: "Atlanta, Georgia",
+          faveSport: res.data.sport,
+        })
+          .then(() => {
+            ghostOneInfo();
+          })
+          .catch(() => {
+            console.log();
+          });
+      })
+      .catch(() => {
+        console.log();
+      });
+  }
+  function ghostOneInfo() {
+    axios
+      .get("https://api.namefake.com/english-united-states/female/")
+      .then(function (res) {
+        db.Ghost.create({
+          fullName: res.data.name,
+          deadFor: 65,
+          homeTown: "Arno, Virginia",
+          faveSport: res.data.sport,
+        })
+          .then(() => {
+            ghostTwoInfo();
+          })
+          .catch(() => {
+            console.log();
+          });
+      })
+      .catch(() => {
+        console.log();
+      });
+  }
+  function ghostTwoInfo() {
+    axios
+      .get("https://api.namefake.com/english-united-states/male/")
+      .then(function (res) {
+        db.Ghost.create({
+          fullName: res.data.name,
+          deadFor: 9,
+          homeTown: "Cleveland, Ohio",
+          faveSport: res.data.sport,
+        })
+          .then(() => {
+            ghostThreeInfo();
+          })
+          .catch(() => {
+            console.log();
+          });
+      })
+      .catch(() => {
+        console.log();
+      });
+  }
+  function ghostThreeInfo() {
+    axios
+      .get("https://api.namefake.com/english-united-states/male/")
+      .then(function (res) {
+        db.Ghost.create({
+          fullName: res.data.name,
+          deadFor: 272,
+          homeTown: "Liverpool, England",
+          faveSport: res.data.sport,
+        })
+          .catch(() => {
+            console.log();
+          })
+          .catch(() => {
+            console.log();
+          });
+      });
+  }
+
   // });
 };
