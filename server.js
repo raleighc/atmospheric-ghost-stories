@@ -22,7 +22,7 @@ app.set("view engine", "handlebars");
 
 app.delete("/api/ghosts", function (req, res) {
   db.Ghost.destroy({
-    where: { id: [1, 2, 3, 4] },
+    where: { deadFor: [170, 65, 9, 272] },
   }
   ).then(() => {
     introGhost();
