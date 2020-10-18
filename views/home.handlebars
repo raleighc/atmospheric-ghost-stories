@@ -1,6 +1,6 @@
 {{!-- Starting Foyer --}}
 
-<body class="startFoyerPage">
+<main class="startFoyerPage">
 
 
 	<div class="grid-x">
@@ -26,10 +26,11 @@
 						<form id="nameForm" class="create-form" onsubmit="return false">
 
 							<div class="form-group">
-								<label class="label-text" for="fullName">AH! Hello. You scared me. I wasn’t expecting you.
-								<br> 	
-								My name is {{entryGhost.fullName}}.
-								<br>
+								<label class="label-text" for="fullName">AH! Hello. You scared me. I wasn’t expecting
+									you.
+									<br>
+									My name is {{entryGhost.fullName}}.
+									<br>
 									What is your name?</label>
 								<input type="text" id="fullName" name="fullName">
 							</div>
@@ -47,7 +48,7 @@
 									<br>
 									No need to be scared, we are only ghosts.
 									<br>
-									Oh the door is locked? How did that happen? 
+									Oh the door is locked? How did that happen?
 									<br>
 									Were you trying to leave
 									already?</label>
@@ -147,9 +148,9 @@
 						<div id="foyerRoomChoice">
 							<p>Which room would you like to enter?</p>
 							<a class="button secondary" href="/room1/2" id="ghostOne">Room 1</a>
-							
+
 							<a class="button secondary" href="/room2/3" id="ghostTwo">Room 2</a>
-							
+
 							<a class="button secondary" href="/room3/4" id="ghostThree">Room 3</a>
 						</div>
 					</div>
@@ -158,3 +159,4 @@
 		</div>
 
 	</div>
+</main>
