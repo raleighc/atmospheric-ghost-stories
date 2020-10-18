@@ -20,43 +20,64 @@ app.use(express.static("public"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-
 app.delete("/api/ghosts", function (req, res) {
-  // console.log("delete ghosts");
-  db.sequelize
-    .query("delete from ghosts")
-    .then((results) => {
-      // console.log("ghost delete");
-      db.sequelize
-        .query("alter table ghosts auto_increment = 1")
-        .then(() => {
-          introGhost();
-        })
-        .catch(() => {
-          console.log();
-        });
-    })
-    .catch(() => {
-      console.log();
-    });
+  db.Ghost.destroy({
+    where: { id: [1, 2, 3, 4] },
+  }
+  ).then(() => {
+    introGhost();
+  }).catch(() => {
+    console.log();
+  });
 });
+
 app.delete("/api/users", function (req, res) {
-  db.sequelize
-    .query("delete from users")
-    .then((results) => {
-      db.sequelize
-        .query("alter table users auto_increment = 1")
-        .then(() => {
-          console.log("user table ready")
-        })
-        .catch(() => {
-          console.log();
-        });
-    })
-    .catch(() => {
-      console.log();
-    });
+  db.User.destroy({
+    where: {
+      id: 1
+    }
+  }
+  ).then(() => {
+  }).catch(() => {
+    console.log();
+  });
 });
+// app.delete("/api/ghosts", function (req, res) {
+//   // console.log("delete ghosts");
+//   db.sequelize
+//     .query("delete from ghosts")
+//     .then((results) => {
+//       // console.log("ghost delete");
+//       db.sequelize
+//         .query("alter table ghosts auto_increment = 1")
+//         .then(() => {
+//           introGhost();
+//         })
+//         .catch(() => {
+//           console.log();
+//         });
+//     })
+//     .catch(() => {
+//       console.log();
+//     });
+// });
+// app.delete("/api/users", function (req, res) {
+//   db.sequelize
+//     .query("delete from users")
+//     .then((results) => {
+//       db.sequelize
+//         .query("alter table users auto_increment = 1")
+//         .then(() => {
+//           console.log("user table ready")
+//         })
+//         .catch(() => {
+//           console.log();
+//         });
+//     })
+//     .catch(() => {
+//       console.log();
+//     });
+// });
 
 introGhost();
 
@@ -146,8 +167,8 @@ require("./controllers/userController")(app);
 require("./controllers/htmlController")(app);
 
 // Syncing our sequelize models and then starting our Express app
-// db.sequelize.sync({ force: true }).then(function () {
-  db.sequelize.sync().then(function () {
+db.sequelize.sync({ force: true }).then(function () {
+  // db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
