@@ -1,11 +1,8 @@
-
 <div class="grid-x">
     <div class="cell">
         <div class="center">
-            <img src="https://ashlynimages.s3.us-east-2.amazonaws.com/SittingRoom.jpg" class="bg2"
-                alt="Room 1 Image" />
-            <img id="room1GhostSprite"
-                src="https://ashlynimages.s3.us-east-2.amazonaws.com/grandmaGhostPXL.png"
+            <img src="https://ashlynimages.s3.us-east-2.amazonaws.com/SittingRoom.jpg" class="bg2" alt="Room 1 Image" />
+            <img id="room1GhostSprite" src="https://ashlynimages.s3.us-east-2.amazonaws.com/grandmaGhostPXL.png"
                 alt="ghost" />
         </div>
     </div>
@@ -25,7 +22,7 @@
 
                         <div class="form-group">
 
-                            <p> `Hello, {{viewUser.fullName}} I’m sorry to bother you, but you looked lost. I
+                            <p> Hello, {{viewUser.fullName}} I’m sorry to bother you, but you looked lost. I
                                 didn’t
                                 mean to scare you.
                                 I just wanted to make sure you were alright. You seem...distracted. You just walked in
@@ -36,14 +33,14 @@
                             </p>
 
                         </div>
-                        {{!-- pos show 1.1 --}}
+                        {{!-- if positive, show interaction1.1 --}}
                         <div id="positiveBtn">
                             <button class="button secondary" id="posBtn1" for="positive" type="submit" name="posBtn">I’m
                                 okay,
                                 thanks. Who are you?
                             </button>
                         </div>
-                        {{!-- neg show 1.2 --}}
+                        {{!-- if negative show interaction1.2 --}}
                         <div id="negativeBtn">
                             <button class="button secondary" id="negBtn1" for="negative" type="submit"
                                 name="negBtn">Ahhhh!
@@ -52,19 +49,16 @@
                             </button>
                         </div>
                     </form>
-                    {{!-- if positive first user response show 1.1 --}}
+                    {{!-- if positive first user response show interaction1.1 --}}
                     <form id="interaction1-1" class="create-form hide">
-
                         <div class="form-group">
-
                             <p>
-                                My name is {{entryGhost.fullName}}, and this is my home. Welcome. I’m sorry for the mess, there’s only
+                                My name is {{entryGhost.fullName}}, and this is my home. Welcome. I’m sorry for the
+                                mess, there’s only
                                 so
                                 much I can do around here these days. It’s been so long since I’ve had new company.`
                             </p>
-
                         </div>
-                        {{!-- pos show 1.3 --}}
                         <div id="positiveBtn2">
                             <button class="button secondary" id="posBtn2" for="positive" type="submit"
                                 name="posBtn">Tell me
@@ -72,7 +66,6 @@
                                 yourself
                             </button>
                         </div>
-                        {{!-- pos show 1.4 --}}
                         <div id="negativeBtn2">
                             <button class="button secondary" id="negBtn2" for="negative" type="submit" name="negBtn">Why
                                 would
@@ -86,14 +79,14 @@
                         <div class="form-group">
 
                             <p>
-                                Oh, calm down. My name is {{entryGhost.fullName}} and this is my home. Normally I would welcome
+                                Oh, calm down. My name is {{entryGhost.fullName}} and this is my home. Normally I would
+                                welcome
                                 visitors,
                                 please
                                 be kind and don’t make me change my mind.
                             </p>
 
                         </div>
-                        {{!-- pos show 1.5 --}}
                         <div id="positiveBtn3">
                             <button class="button secondary" id="posBtn3" for="positive" type="submit"
                                 name="posBtn">Tell me
@@ -101,7 +94,6 @@
                                 yourself
                             </button>
                         </div>
-                        {{!-- neg show 1.6 --}}
                         <div id="negativeBtn3">
                             <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Why
                                 would
@@ -109,13 +101,14 @@
                             </button>
                         </div>
                     </form>
-                    {{!-- if positive second user response show 1.3 --}}
+                    {{!-- positive response --}}
                     <form id="interaction1-3" class="create-form hide">
 
                         <div class="form-group">
 
                             <p>
-                                I was born in {{entryGhost.homeTown}} but I spent most of my life in this house. My husband, Charlie,
+                                I was born in {{entryGhost.homeTown}} but I spent most of my life in this house. My
+                                husband, Charlie,
                                 and
                                 I
                                 loved this home. We raised our family here. My children took their first steps right
@@ -131,7 +124,6 @@
                             </p>
 
                         </div>
-                        {{!-- pos show 1.7 --}}
                         <div id="positiveBtn4">
                             <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Who
                                 are
@@ -139,7 +131,6 @@
                                 other spirits? How can I help?
                             </button>
                         </div>
-                        {{!-- neg show 1.8 --}}
                         <div id="negativeBtn4">
                             <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Why
                                 would I
@@ -147,7 +138,7 @@
                             </button>
                         </div>
                     </form>
-                    {{!-- if negative second user response show 1.4--}}
+                    {{!-- negative response --}}
                     <form id="interaction1-4" class="create-form hide">
 
                         <div class="form-group">
@@ -161,7 +152,6 @@
                             </p>
 
                         </div>
-                        {{!-- pos show 1.7 --}}
                         <div id="positiveBtn5">
                             <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Who
                                 are
@@ -169,7 +159,6 @@
                                 other spirits? How can I help?
                             </button>
                         </div>
-                        {{!-- neg show 1.8 --}}
                         <div id="negativeBtn5">
                             <button class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn">Why
                                 would I
@@ -177,6 +166,7 @@
                             </button>
                         </div>
                     </form>
+                    {{!-- positive response --}}
                     <form id="interaction1-5" class="create-form hide">
 
                         <div class="form-group">
@@ -185,7 +175,8 @@
                                 They are other spirits like myself, who were trapped here throughout time, but we want
                                 to
                                 leave
-                                now. When I died in a {{entryGhost.faveSport}} accident, I just couldn’t let myself leave here. And now I’m
+                                now. When I died in a {{entryGhost.faveSport}} accident, I just couldn’t let myself
+                                leave here. And now I’m
                                 stuck. Just
                                 give
                                 the
@@ -198,40 +189,38 @@
                             </p>
 
                         </div>
-                        {{!-- pos show 1.7 --}}
                         <div id="positiveBtn6">
-                            <a class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn" href="/foyer/1">I
+                            <a class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn"
+                                href="/foyer/1">I
                                 want
                                 to help.
                             </a>
                         </div>
-                        {{!-- neg show 1.8 --}}
                         <div id="negativeBtn6">
-                            <a class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn" href="/foyer/1">I
+                            <a class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn"
+                                href="/foyer/1">I
                                 don't
                                 want to
                                 help.
                             </a>
                         </div>
                     </form>
+                    {{!-- negative response --}}
                     <form id="interaction1-6" class="create-form hide">
 
                         <div class="form-group">
-
                             <p>
                                 GET OUT
                             </p>
-
                         </div>
-                        {{!-- pos show 1.7 --}}
                         <div id="positiveBtn7">
-                            <a class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn" href="/foyer/1">OK
+                            <a class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn"
+                                href="/foyer/1">OK
                             </a>
                         </div>
-                        {{!-- neg show 1.8 --}}
                         <div id="negativeBtn7">
-                            <a class="button secondary" id="negBtn3" for="negative" type="submit"
-                                name="negBtn" href="/foyer/1">BAHHHHH
+                            <a class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn"
+                                href="/foyer/1">BAHHHHH
                             </a>
                         </div>
                     </form>

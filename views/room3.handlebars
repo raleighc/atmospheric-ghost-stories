@@ -1,10 +1,8 @@
 <div class="grid-x">
     <div class="cell">
         <div class="center">
-            <img src="https://ashlynimages.s3.us-east-2.amazonaws.com/Bedroom.jpg" class="bg"
-                alt="Room 3 Image" />
-            <img id="room3GhostSprite"
-                src="https://ashlynimages.s3.us-east-2.amazonaws.com/pioneerGhostPXL.png"
+            <img src="https://ashlynimages.s3.us-east-2.amazonaws.com/Bedroom.jpg" class="bg" alt="Room 3 Image" />
+            <img id="room3GhostSprite" src="https://ashlynimages.s3.us-east-2.amazonaws.com/pioneerGhostPXL.png"
                 alt="ghost" />
         </div>
     </div>
@@ -52,7 +50,8 @@
                             <p>
                                 I was one of the first people to build permanently on this patch of land. Greetings, my
                                 name is
-                                {{entryGhost.fullName}}. Welcome to my land. I was here when we were still a loyal colony. I
+                                {{entryGhost.fullName}}. Welcome to my land. I was here when we were still a loyal
+                                colony. I
                                 came from
                                 {{entryGhost.homeTown}} to provide
                                 my pious services to this wild place.
@@ -74,7 +73,7 @@
                             </button>
                         </div>
                     </form>
-                    {{!-- if negative first user response show 1.2--}}
+                    {{!-- negative response --}}
                     <form id="interaction1-2" class="create-form hide">
 
                         <div class="form-group">
@@ -87,14 +86,12 @@
                             </p>
 
                         </div>
-                        {{!-- pos show 1.5 --}}
                         <div id="positiveBtn3">
                             <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">Oh
                                 wow, so
                                 you've been in the house the longest?
                             </button>
                         </div>
-                        {{!-- neg show 1.6 --}}
                         <div id="negativeBtn3">
                             <button class="button secondary" id="negBtn3" for="negative" type="submit"
                                 name="negBtn">Okay, well
@@ -110,21 +107,20 @@
                             <p>
                                 Not exactly. For a long time my wife, Barbara, and I wandered in the overgrown potato
                                 fields
-                                outside after our cabin finally collapsed from old age. When {{frontGhost.fullName}} built her house on
+                                outside after our cabin finally collapsed from old age. When {{frontGhost.fullName}}
+                                built her house on
                                 the same
                                 land, I got stuck
                                 inside her house. I don't know what happened to the rest of my family.
                             </p>
 
                         </div>
-                        {{!-- pos show 1.7 --}}
                         <div id="positiveBtn4">
                             <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">I'm
                                 so sorry to
                                 hear that. I hope they're okay.
                             </button>
                         </div>
-                        {{!-- neg show 1.8 --}}
                         <div id="negativeBtn4">
                             <button class="button secondary" id="negBtn3" for="negative" type="submit"
                                 name="negBtn">Well, you can't
@@ -147,14 +143,12 @@
                             </p>
 
                         </div>
-                        {{!-- pos show 1.7 --}}
                         <div id="positiveBtn5">
                             <button class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn">I'm
                                 so sorry to
                                 hear that. I hope they're okay.
                             </button>
                         </div>
-                        {{!-- neg show 1.8 --}}
                         <div id="negativeBtn5">
                             <button class="button secondary" id="negBtn3" for="negative" type="submit"
                                 name="negBtn">Well, you can't
@@ -162,6 +156,7 @@
                             </button>
                         </div>
                     </form>
+                    {{!-- positive response --}}
                     <form id="interaction1-5" class="create-form hide">
                         <div class="form-group">
                             <p>
@@ -176,14 +171,12 @@
                             </p>
 
                         </div>
-                        {{!-- pos show 1.7 --}}
                         <div id="positiveBtn6">
                             <a class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn"
                                 href="/foyer/1">I
                                 want to help.
                             </a>
                         </div>
-                        {{!-- neg show 1.8 --}}
                         <div id="negativeBtn6">
                             <a class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn"
                                 href="/foyer/1">I
@@ -192,20 +185,19 @@
                             </a>
                         </div>
                     </form>
+                    {{!-- negative response --}}
                     <form id="interaction1-6" class="create-form hide">
                         <div class="form-group">
                             <p>
                                 Do not test me child. I will chase you away like I chased the others away!!
                             </p>
                         </div>
-                        {{!-- pos show 1.7 --}}
                         <div id="positiveBtn7">
                             <a class="button secondary" id="posBtn3" for="positive" type="submit" name="posBtn"
                                 href="/foyer/1">I'm
                                 sorry.
                             </a>
                         </div>
-                        {{!-- neg show 1.8 --}}
                         <div id="negativeBtn7">
                             <a class="button secondary" id="negBtn3" for="negative" type="submit" name="negBtn"
                                 href="/foyer/1">Fine, do it,
